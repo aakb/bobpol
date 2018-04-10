@@ -1,0 +1,9 @@
+<?php
+
+function bobpol_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == "views_exposed_form") {
+    if (isset($form['combine'])) {
+      $form['combine']['#attributes'] = array('data-bef-auto-submit-exclude' => '');
+    }
+  };
+}
