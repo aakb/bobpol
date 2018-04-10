@@ -1,0 +1,20 @@
+uuid: 5a5aa84b-5cdc-49cb-bfa2-432a9499d73f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bobpol
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: bobpol_page_title
+theme: bobpol
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

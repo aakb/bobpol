@@ -1,0 +1,14 @@
+uuid: 2b7394c9-e595-45f9-aef4-4ec7de782c82
+name: 'Bob politikken'
+mail: wwwadmin@mkb.aarhus.dk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /front
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
