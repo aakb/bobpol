@@ -6,7 +6,8 @@ dependencies:
     - node
 id: promote
 label: Promote
-bundles: {  }
+bundles:
+  - post
 entity_type: node
 global: false
 weight: 0
