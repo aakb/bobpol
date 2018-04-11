@@ -16,8 +16,8 @@ autoprefixer = require('gulp-autoprefixer');
 // Set paths
 var scriptFiles = 'javascripts/*.js',
 scriptDest = 'static/js',
-styleFiles = 'scss/*/*.scss',
-styleDest = 'stylesheets/',
+styleFiles = 'scss/*.scss',
+styleDest = 'static/css',
 imgFiles = 'images/**/*.*',
 imgDest = 'static/img',
 fontFiles = 'fonts/**/*.*',
@@ -83,8 +83,7 @@ gulp.task('scripts', function() {
         scriptFiles ,
         'node_modules/jquery/dist/jquery.js',
         'node_modules/popper.js/dist/umd/popper.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js',
-        'node_modules/add-to-homescreen/dist/addtohomescreen.min.js'
+        'node_modules/bootstrap/dist/js/bootstrap.js'
     ])
     .pipe(gulpif(jsMinify, uglify()))
     .pipe(gulpif(jsMinify, rename({ suffix: '.min' })))
