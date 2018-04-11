@@ -9,8 +9,7 @@
   "author": "ITK",
   "license": "ISC",
   "devDependencies": {
-    "add-to-homescreen": "^3.2.6",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.0",
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
     "eslint": "^4.8.0",
