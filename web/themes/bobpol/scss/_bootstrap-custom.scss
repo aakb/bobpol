@@ -1,0 +1,72 @@
+// Set default colors
+$white:                             #ffffff;
+$black:                             #333333;
+$pink:                              #ee0043;
+$pink-light:                        #fab2c6;
+$purple:                            #673ab7;
+$purple-light:                      #d1c4e9;
+$blue:                              #3661d8;
+$blue-light:                        #c2cff3;
+$navy:                              #2b3ba2;
+$navy-light:                        #bfc4e3;
+$petroleum:                         #008486;
+$petroleum-light:                   #b2dada;
+$green:                             #008850;
+$green-light:                       #b2dbca;
+$yellow:                            #ffe13d;
+$yellow-light:                      #fff6c4;
+$orange:                            #ff5f31;
+$orange-light:                      #ffcfc1;
+$red:                               #d32f2f;
+$red-light:                         #f2c0c0;
+
+// Set primary color
+$primary: $blue;
+
+// Set default font
+$font-family-sans-serif: 'Arial Black', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+
+$lead-font-size: 1.2rem;
+$lead-font-weight: 400;
+
+// Set card defaults
+$card-border-radius: 0;
+$card-border-color: none;
+$card-inner-border-radius: 0;
+
+// Import bootstrap scss
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../node_modules/bootstrap/scss/_root.scss";
+@import "../../node_modules/bootstrap/scss/_reboot.scss";
+@import "../../node_modules/bootstrap/scss/_type.scss";
+@import "../../node_modules/bootstrap/scss/_images.scss";
+// @import "../../node_modules/bootstrap/scss/_code.scss";
+@import "../../node_modules/bootstrap/scss/_grid.scss";
+@import "../../node_modules/bootstrap/scss/_tables.scss";
+// @import "../../node_modules/bootstrap/scss/_forms.scss";
+@import "../../node_modules/bootstrap/scss/_buttons.scss";
+@import "../../node_modules/bootstrap/scss/_transitions.scss";
+// @import "../../node_modules/bootstrap/scss/_dropdown.scss";
+// @import "../../node_modules/bootstrap/scss/_button-group.scss";
+// @import "../../node_modules/bootstrap/scss/_input-group.scss";
+// @import "../../node_modules/bootstrap/scss/_custom-forms.scss";
+@import "../../node_modules/bootstrap/scss/_nav.scss";
+@import "../../node_modules/bootstrap/scss/_navbar.scss";
+@import "../../node_modules/bootstrap/scss/_card.scss";
+// @import "../../node_modules/bootstrap/scss/_breadcrumb.scss";
+// @import "../../node_modules/bootstrap/scss/_pagination.scss";
+@import "../../node_modules/bootstrap/scss/_badge.scss";
+// @import "../../node_modules/bootstrap/scss/_jumbotron.scss";
+@import "../../node_modules/bootstrap/scss/_alert.scss";
+// @import "../../node_modules/bootstrap/scss/_progress.scss";
+@import "../../node_modules/bootstrap/scss/_media.scss";
+@import "../../node_modules/bootstrap/scss/_list-group.scss";
+@import "../../node_modules/bootstrap/scss/_close.scss";
+@import "../../node_modules/bootstrap/scss/_modal.scss";
+// @import "../../node_modules/bootstrap/scss/_tooltip.scss";
+// @import "../../node_modules/bootstrap/scss/_popover.scss";
+// @import "../../node_modules/bootstrap/scss/_carousel.scss";
+@import "../../node_modules/bootstrap/scss/_utilities.scss";
+// @import "../../node_modules/bootstrap/scss/_print.scss";
