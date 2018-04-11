@@ -1,0 +1,34 @@
+{
+  "name": "bobpol",
+  "version": "1.0.0",
+  "description": "Bobpol website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ITK",
+  "license": "ISC",
+  "devDependencies": {
+    "add-to-homescreen": "^3.2.6",
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
+    "eslint": "^4.8.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gutil": "^1.6.4",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "run-sequence": "^2.0.0"
+  },
+  "dependencies": {
+    "npm": "^5.8.0"
+  }
+}
