@@ -1,7 +1,14 @@
+// Import custom mixins
+@import '_custom-mixins';
+
+// Import custom variables before bootstrap to secure override
+@import '_custom-variables';
+
 // Import custom bootstrap
 @import '_bootstrap-custom';
 
 // Import partials
+@import 'partials/_hero';
 @import 'partials/_card';
 @import 'partials/_nav';
 
