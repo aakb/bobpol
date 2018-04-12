@@ -9,7 +9,7 @@ _core:
 id: bobpol_page_title
 theme: bobpol
 region: content
-weight: -30
+weight: -1
 provider: null
 plugin: page_title_block
 settings:
