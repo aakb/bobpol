@@ -79,27 +79,26 @@
       {{ page.header }}
     </header>
   </div>
-{% if page.hero %}
+  {% if page.hero %}
     <div class="grid-element__hero-image">
       {{ page.hero }}
     </div>
   {% endif %}
-  <div class="row">
-    <div class="col-md-12" role="main">
+  <div class="row"  >
+    <main class="col-md-12" role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div class="layout-content">
         {{ page.content }}
       </div>{# /.layout-content #}
+    </main>
+  </div>
+    {% if page.footer %}
+    <div class="row">
+      <footer role="contentinfo">
+        {{ page.footer }}
+      </footer>
     </div>
-  </div>
-
-  {% if page.footer %}
-  <div class="row">
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  </div>
-  {% endif %}
+    {% endif %}
 </div>{# /.layout-container #}
 <div class="container-fluid">
   <div class="row">
@@ -110,7 +109,7 @@
   <div class="row">
     <div class="col-md-12">
       <hr>
-      <p><a href="#">Privatlivspolitik</p>
+      <a href="#"><p>>Privatlivspolitik</p></a>
     </div>
   </div>
 </div>
