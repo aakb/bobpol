@@ -5717,6 +5717,9 @@ nav.navbar {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
 
+.toolbar-oriented .toolbar-bar {
+  z-index: 2000; }
+
 body {
   background: #f8f9fa;
   padding-top: 5rem; }
