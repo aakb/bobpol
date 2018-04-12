@@ -43,23 +43,32 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-  <header role="banner">
-    {{ page.header }}
-  </header>
-  <div class="grid-element__hero-image">
-    {{ page.hero }}
+
+<div class="container">
+  <div class="row">
+    <header class="col-md-12" role="banner">
+      {{ page.header }}
+    </header>
   </div>
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-  </main>
+  {% if page.hero %}
+    <div class="grid-element__hero-image">
+      {{ page.hero }}
+    </div>
+  {% endif %}
+  <div class="row">
+    <div class="col-md-12" role="main">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      <div class="layout-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+    </div>
+  </div>
 
   {% if page.footer %}
+  <div class="row">
     <footer role="contentinfo">
       {{ page.footer }}
     </footer>
+  </div>
   {% endif %}
 </div>{# /.layout-container #}
