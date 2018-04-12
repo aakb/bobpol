@@ -96,8 +96,9 @@
 
 </div> #}
 
-<div class="card">
-  <img class="card-img-top" src="{{ file_url(node.field_image.entity.fileuri) }}" alt="Card image cap">
+<div class="card mb-5">
+  <div role="backgound image" class="card-img-top" style="background-image: url('{{ file_url(node.field_image.entity.fileuri) }}');">
+  </div>
   <div class="card-body">
     {{ title_prefix }}
       <a href="{{ url }}" rel="bookmark"><h2 class="card-title">{{ label }}</h2></a>

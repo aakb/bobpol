@@ -1,6 +1,13 @@
 // Import custom bootstrap
 @import '_bootstrap-custom';
 
+// Import partials
+@import 'partials/_card';
+@import 'partials/_nav';
+
+// Global styles
+
 body {
     background: $gray-100;
+    padding-top: 5rem;
 }

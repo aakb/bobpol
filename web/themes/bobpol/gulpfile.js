@@ -16,7 +16,7 @@ autoprefixer = require('gulp-autoprefixer');
 // Set paths
 var scriptFiles = 'javascripts/*.js',
 scriptDest = 'static/js',
-styleFiles = 'scss/*.scss',
+styleFiles = 'scss/**/*.scss',
 styleDest = 'static/css',
 imgFiles = 'images/**/*.*',
 imgDest = 'static/img',

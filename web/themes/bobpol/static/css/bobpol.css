@@ -5450,5 +5450,18 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
+.card .card-img-top {
+  height: 10rem;
+  background-size: cover;
+  background-position: center center; }
+
+.card .card-body {
+  min-height: 11rem; }
+
+nav.navbar {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+
 body {
-  background: #f8f9fa; }
+  background: #f8f9fa;
+  padding-top: 5rem; }
