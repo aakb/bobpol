@@ -1,3 +1,10 @@
+/*Icons*/
+/**
+ * Computes a CSS calc function that betweens a value from
+ * A to B over viewport-width A to viewport-width B.
+ * Requires a media query to cap the value at B.
+ */
+/*Theme Mixin - For use in Umbraco Backend Theme Picker*/
 :root {
   --blue: #3661d8;
   --indigo: #6610f2;
@@ -5563,6 +5570,140 @@ a.text-dark:hover, a.text-dark:focus {
 
 .invisible {
   visibility: hidden !important; }
+
+/*Icons*/
+/**
+ * Computes a CSS calc function that betweens a value from
+ * A to B over viewport-width A to viewport-width B.
+ * Requires a media query to cap the value at B.
+ */
+/*Theme Mixin - For use in Umbraco Backend Theme Picker*/
+.grid-element__hero-image > .container {
+  width: auto;
+  padding: 0; }
+  .grid-element__hero-image > .container > .row,
+  .grid-element__hero-image > .container > .row > .grid-column {
+    margin: 0;
+    padding: 0; }
+
+.grid-element__hero-image:hover .underlined:after,
+.grid-element__hero-image a.hero:focus .underlined:after {
+  width: 130px; }
+
+.hero-container {
+  color: #ffffff;
+  background: #3661d8; }
+  .hero-container .bg-light {
+    color: #333333;
+    background: #f8f9fa; }
+  .hero-container a,
+  .hero-container .link,
+  .hero-container .link:before {
+    color: #ffffff; }
+    .hero-container a span,
+    .hero-container .link span,
+    .hero-container .link:before span {
+      color: #ffffff; }
+  .hero-container a:hover {
+    color: #ffffff; }
+  .hero-container .underlined:after {
+    background: #ffffff; }
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  /*#video-viewport {
+        opacity: 0;
+        transition: opacity ease 0.5s;
+        -o-transition: opacity ease 0.5s;
+        -ms-transition: opacity ease 0.5s;
+        -moz-transition: opacity ease 0.5s;
+        -webkit-transition: opacity ease 0.5s;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        overflow: hidden;
+    }*/ }
+  .hero::after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .hero:hover .hero__link, .hero:focus .hero__link {
+    text-decoration: underline; }
+  .hero a {
+    display: inline-block;
+    margin-bottom: 1rem; }
+  .hero--image-right .hero__media-container {
+    right: 0;
+    left: auto; }
+  .hero--image-right .hero__content {
+    float: left;
+    padding-right: 2rem;
+    padding-left: 0; }
+  .hero__content {
+    position: relative;
+    width: 100%;
+    float: right;
+    padding: 1rem 0;
+    font-size: 1.25rem; }
+    @media (min-width: 576px) {
+      .hero__content {
+        width: 50%;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        background: #3661d8; } }
+  .hero__link {
+    display: block;
+    margin-bottom: 1rem;
+    color: #ffffff; }
+  .hero__media-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 37.5%; }
+    @media (min-width: 576px) {
+      .hero__media-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        max-width: 50%;
+        height: 100%;
+        padding: 0; } }
+  .hero__media {
+    -webkit-transition: transform ease-in-out 300ms 0ms;
+    -webkit-transition: -webkit-transform ease-in-out 300ms 0ms;
+    transition: -webkit-transform ease-in-out 300ms 0ms;
+    transition: transform ease-in-out 300ms 0ms;
+    transition: transform ease-in-out 300ms 0ms, -webkit-transform ease-in-out 300ms 0ms;
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100% !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .hero img.hero__media {
+    width: 104% !important;
+    max-width: 104% !important; }
+    @media (min-width: 576px) {
+      .hero img.hero__media {
+        height: 104% !important; } }
 
 .card .card-img-top {
   height: 10rem;
