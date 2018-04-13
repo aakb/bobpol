@@ -1,0 +1,7 @@
+name: Bobpol Hotness
+type: module
+interface translation project: bobpol_hotness
+interface translation server pattern: modules/custom/bobpol_hotness/translationsbobpol_hotness.%language.po
+description: 'Adds hotness marker for nodes'
+package: Bobpol
+core: '8.x'

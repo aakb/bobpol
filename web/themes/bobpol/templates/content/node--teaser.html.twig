@@ -96,14 +96,17 @@
 
 </div> #}
 
-<div class="card mb-5">
-  <div role="backgound image" class="card-img-top" style="background-image: url('{{ file_url(node.field_image.entity.fileuri) }}');">
-  </div>
+<div class="card mb-5 hotness-{{ content.field_hotness.0['#markup'] ? content.field_hotness.0['#markup']|striptags : 1}}">
+  {{ content.field_image }}
   <div class="card-body">
-    {{ title_prefix }}
-      <a href="{{ url }}" rel="bookmark"><h2 class="card-title">{{ label }}</h2></a>
-    {{ title_suffix }}
-    <p class="card-text">{{ content.field_example }}</p>
-    <a href="{{ url }}" class="btn btn-primary">Se mere</a>
+    <h5 class="card-title">{{ label }}</h5>
+    <p class="card-text">{{ content.body }}</p>
   </div>
+  <div class="card-footer">
+    <small class="text-muted">
+      <div class="card-category">Tag: {{ content.field_category }}</div>
+      <div class="card-comment-count">Comment count: {{ comment_count }}</div>
+    </small>
+  </div>
+  {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness') }}
 </div>

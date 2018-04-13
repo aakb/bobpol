@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.post.body
     - field.field.node.post.field_category
     - field.field.node.post.field_comments
+    - field.field.node.post.field_hotness
     - field.field.node.post.field_image
     - node.type.post
   module:
     - comment
     - image
+    - options
     - text
     - user
 id: node.post.default
@@ -35,6 +37,13 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
+  field_hotness:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_image:
     weight: 1
     label: hidden
@@ -43,6 +52,9 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  flag_promote:
+    weight: 10
     region: content
   links:
     weight: 2

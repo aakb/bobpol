@@ -1,0 +1,7 @@
+bobpol_hotness.settings:
+  path: '/admin/config/hotness'
+  defaults:
+    _form: '\Drupal\bobpol_hotness\Form\BobpolHotnessConfigForm'
+    _title: 'Bobpol Hotness'
+  requirements:
+    _permission: 'access bobpol hotness settings'

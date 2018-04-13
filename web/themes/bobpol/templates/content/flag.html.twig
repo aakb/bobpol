@@ -35,5 +35,5 @@
 {# Set nofollow to prevent search bots from crawling anonymous flag links #}
 {% set attributes = attributes.setAttribute('rel', 'nofollow') %}
 
-<div class="{{classes|join(' ')}}"><a{{ attributes }}>{{ title }}</a></div>
+<div class="{{classes|join(' ')}}"><a{{ attributes.addClass('badge badge-dark') }}>{{ title }} {{ flag_count }}</a></div>
 {% endspaceless %}
