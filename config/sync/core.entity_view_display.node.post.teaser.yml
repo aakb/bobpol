@@ -5,10 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
+    - field.field.node.post.field_category
+    - field.field.node.post.field_comments
+    - field.field.node.post.field_hotness
     - field.field.node.post.field_image
+    - image.style.card
     - node.type.post
   module:
     - image
+    - options
     - text
     - user
 id: node.post.teaser
@@ -18,30 +23,46 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: text_trimmed
     weight: 0
     settings:
-      trim_length: 600
+      trim_length: 200
     third_party_settings: {  }
     region: content
+  field_category:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_hotness:
+    type: list_default
+    weight: 4
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_image:
     type: image
     weight: 1
     region: content
     label: hidden
     settings:
-      image_style: ''
+      image_style: card
       image_link: ''
     third_party_settings: {  }
   flag_promote:
-    weight: 10
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_category: true
   field_comments: true
   langcode: true
