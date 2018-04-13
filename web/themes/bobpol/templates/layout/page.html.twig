@@ -82,13 +82,11 @@
     {{ page.header }}
   </nav>
 </div>
-<div class="container-fluid">
-  {% if page.hero %}
-    <div class="grid-element__hero-image">
-      {{ page.hero }}
-    </div>
-  {% endif %}
-</div>
+
+{% if page.hero %}
+  {{ page.hero }}
+{% endif %}
+
 <div class="container">
   <div class="row"  >
     <main class="col-md-12" role="main">
@@ -106,16 +104,27 @@
     </div>
     {% endif %}
 </div>{# /.layout-container #}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-3-md">
-
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        {# TODO: Content should be editable from admin #}
+        <h4>Aarhus Kommune</h4>
+        <p>Kultur & Borgerservice<br>
+           Hack Kampmanns Plads 2<br>
+           8000 Aarhus C<br>
+        </p>
+        <h5>TLF. 89 40 22 22</h5>
+        {# TODO: White logo from theme. Insert as svg and apply color from stylesheet #}
+        <p><img src="/themes/bobpol/static/images/aak_kb_logo_negative.svg" alt="Aarhus Kommune Kultur og Borgerservice"></p>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <hr>
-      <a href="#"><p>>Privatlivspolitik</p></a>
+    <div class="row">
+      <div class="col-md-12 permalinks">
+        {# TODO: Permalinks should be editable from admin #}
+        <a href="#">Privatlivspolitik</a>
+        <a href="#">aarhus.dk</a>
+      </div>
     </div>
   </div>
 </div>

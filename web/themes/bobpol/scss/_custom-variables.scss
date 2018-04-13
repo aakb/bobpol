@@ -85,16 +85,16 @@ $aspect-ratio-padding-8-3:          37.50%;
 // /*FONTS*/
 // $icons-font-family:                 "kicons" !default;
 // $icon-font-path:                    "/Resources/fonts/bootstrap/" !default;
-// $font-family-sans-serif:            Arial, sans-serif !default;
+$font-family-sans-serif:            Arial, sans-serif !default;
 // $font-family-alt:                   Arial, sans-serif !default;
-// $font-family-base:                  $font-family-sans-serif !default;
+$font-family-base:                  $font-family-sans-serif !default;
 
-// $font-weight-regular:               400 !default;
-// $font-weight-black:                 900 !default;
+$font-weight-regular:               400 !default;
+$font-weight-black:                 900 !default;
 
-// $line-height-base:                  1.5 !default;
-// $headings-line-height:              1.4 !default;
-// $headings-font-weight:              700 !default;
+$line-height-base:                  1.5 !default;
+$headings-line-height:              1.4 !default;
+$headings-font-weight:              700 !default;
 
 // $font-size-base:                    17px !default;
 // $font-size-large:                   20px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
@@ -111,15 +111,15 @@ $aspect-ratio-padding-8-3:          37.50%;
 // $font-size-teaser:                  1.625rem !default; //26px
 // $font-size-teaser-responsive:       1.25rem !default; //20px
 
-// $font-size-h1:                      2.375rem !default; //38px
-// $font-size-h1-responsive:           1.5rem !default; //25px
-// $font-size-h2:                      1.75rem !default; //28px
-// $font-size-h2-responsive:           1.25rem !default; //20px
-// $font-size-h3:                      1.25rem !default; //20px
-// $font-size-h3-responsive:           1.125rem !default; //18px
-// $font-size-h4:                      1.25rem !default; //20px
-// $font-size-h5:                      0.9375rem !default; //15px
-// $font-size-h6:                      1.0625rem !default; //17px
+$font-size-h1:                      2.375rem !default; //38px
+$font-size-h1-responsive:           1.5rem !default; //25px
+$font-size-h2:                      1.75rem !default; //28px
+$font-size-h2-responsive:           1.25rem !default; //20px
+$font-size-h3:                      1.25rem !default; //20px
+$font-size-h3-responsive:           1.125rem !default; //18px
+$font-size-h4:                      1.25rem !default; //20px
+$font-size-h5:                      0.9375rem !default; //15px
+$font-size-h6:                      1.0625rem !default; //17px
 
 
 

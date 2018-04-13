@@ -8,9 +8,10 @@
 @import '_bootstrap-custom';
 
 // Import partials
+@import 'partials/_nav';
 @import 'partials/_hero';
 @import 'partials/_card';
-@import 'partials/_nav';
+@import 'partials/_footer';
 @import 'partials/_drupal';
 
 // Global styles
