@@ -5716,6 +5716,21 @@ a.text-dark:hover, a.text-dark:focus {
 .card img {
   width: 100%; }
 
+.card .btn.hotness-1 {
+  background-color: #c2cff3; }
+
+.card .btn.hotness-2 {
+  background-color: #bfc4e3; }
+
+.card .btn.hotness-3 {
+  background-color: #3661d8; }
+
+.card .btn.hotness-4 {
+  background-color: #2b3ba2; }
+
+.card .btn.hotness-5 {
+  background-color: #673ab7; }
+
 nav.navbar {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }

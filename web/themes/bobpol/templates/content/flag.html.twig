@@ -31,9 +31,17 @@
     action_class
   ]
 %}
+  {%
+  set classes_att = [
+  'btn',
+  'btn-primary',
+  'hotness-' ~ hotness,
+  action_class
+  ]
+  %}
 
 {# Set nofollow to prevent search bots from crawling anonymous flag links #}
 {% set attributes = attributes.setAttribute('rel', 'nofollow') %}
 
-<div class="{{classes|join(' ')}}"><a{{ attributes.addClass('badge badge-dark') }}>{{ title }} {{ flag_count }}</a></div>
+<div class="{{classes|join(' ')}}"><a{{ attributes.addClass(classes_att|join(' ')) }}>{{ title }} {{ flag_count }}</a></div>
 {% endspaceless %}

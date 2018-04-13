@@ -101,12 +101,17 @@
   <div class="card-body">
     <h5 class="card-title">{{ label }}</h5>
     <p class="card-text">{{ content.body }}</p>
+    <div class="card-link">{{ content.links }}</div>
   </div>
-  <div class="card-footer">
-    <small class="text-muted">
-      <div class="card-category">Tag: {{ content.field_category }}</div>
-      <div class="card-comment-count">Comment count: {{ comment_count }}</div>
+  <div class="card-footer container">
+    <small class="text-muted row">
+      <div class="col">
+        <div class="card-category">Tag: {{ content.field_category }}</div>
+        <div class="card-comment-count">Comment count: {{ comment_count }}</div>
+      </div>
+      <div class="col">
+        {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness') }}
+      </div>
     </small>
   </div>
-  {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness') }}
 </div>
