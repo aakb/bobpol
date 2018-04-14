@@ -9,6 +9,8 @@ label: 'Anonym bruger'
 weight: 0
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'flag promote'
   - 'unflag promote'
+  - 'view the administration theme'

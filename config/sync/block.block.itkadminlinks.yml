@@ -9,7 +9,7 @@ dependencies:
 id: itkadminlinks
 theme: bobpol
 region: footer
-weight: 0
+weight: -2
 provider: null
 plugin: itk_admin_links
 settings:
