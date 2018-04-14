@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - aarhus_hero
+    - system
   theme:
     - bobpol
 id: aarhushero
@@ -17,4 +18,9 @@ settings:
   label: 'Aarhus hero'
   provider: aarhus_hero
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/user\r\n/user/*"
+    negate: false
+    context_mapping: {  }

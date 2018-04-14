@@ -1,0 +1,77 @@
+uuid: 77d60427-fbb0-4dbe-ae74-441dda1b8898
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.node.static_page.body
+    - field.field.node.static_page.field_comments
+    - field.field.node.static_page.field_image
+    - image.style.hero
+    - node.type.static_page
+  module:
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          right: aside
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - node_title
+        - field_image
+      left:
+        - node_post_date
+        - body
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 2
+        label: hidden
+        formatter: ds_post_date_long
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.static_page.default
+targetEntityType: node
+bundle: static_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: left
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: hero
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: header
+hidden:
+  field_comments: true
+  langcode: true
+  links: true

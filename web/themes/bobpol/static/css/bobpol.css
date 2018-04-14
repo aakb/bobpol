@@ -5727,6 +5727,9 @@ nav.navbar {
         -webkit-transform: translateY(-1px);
                 transform: translateY(-1px); }
 
+.content {
+  background: #ffffff; }
+
 .toolbar-oriented .toolbar-bar {
   z-index: 2000; }
 

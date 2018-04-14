@@ -9,9 +9,6 @@ display:
           sort_asc_label: Stigende
           sort_desc_label: Faldende
       filters:
-        combine:
-          expose:
-            label: Søg
         tid:
           expose:
             label: Kategori

@@ -1,7 +1,13 @@
 uuid: 86f57846-0b1f-4af2-a093-83ce9ba19354
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: Post
 type: post
 description: ''

@@ -43,37 +43,6 @@
  * @see html.html.twig
  */
 #}
-{#
-<div class="container-fluid">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</div>
-#}
 <div class="container-fluid">
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,17 +61,15 @@
     <main class="col-md-12" role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div class="layout-content">
+        {{ page.title }}
         {{ page.content }}
+
+        {% if page.sidebar %}
+          {{ page.sidebar }}
+        {% endif %}
       </div>{# /.layout-content #}
     </main>
   </div>
-    {% if page.footer %}
-    <div class="row">
-      <footer role="contentinfo">
-        {{ page.footer }}
-      </footer>
-    </div>
-    {% endif %}
 </div>{# /.layout-container #}
 <div class="footer">
   <div class="container">
@@ -121,9 +88,9 @@
     </div>
     <div class="row">
       <div class="col-md-12 permalinks">
-        {# TODO: Permalinks should be editable from admin #}
-        <a href="#">Privatlivspolitik</a>
-        <a href="#">aarhus.dk</a>
+        {% if page.footer %}
+          {{ page.footer }}
+        {% endif %}
       </div>
     </div>
   </div>
