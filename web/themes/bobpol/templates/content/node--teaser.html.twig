@@ -70,36 +70,11 @@
  *   in different view modes.
  */
 #}
-{# <div class="col-md-4">
-
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
-
-</div> #}
 
 <div class="card mb-5 hotness-{{ content.field_hotness.0['#markup'] ? content.field_hotness.0['#markup']|striptags : 1}}">
-  {{ content.field_image }}
+  <a href="{{ url }}">{{ content.field_image }}</a>
   <div class="card-body">
-    <h5 class="card-title">{{ label }}</h5>
+    <h5 class="card-title"><a href="{{ url }}">{{ label }}</a></h5>
     <p class="card-text">{{ content.body }}</p>
     <div class="card-link">{{ content.links }}</div>
   </div>
