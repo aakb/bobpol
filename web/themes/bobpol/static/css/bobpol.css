@@ -5655,6 +5655,11 @@ nav.navbar {
  * Requires a media query to cap the value at B.
  */
 /*Theme Mixin - For use in Umbraco Backend Theme Picker*/
+.group-footer {
+  background: #e6e6e6;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
 .footer {
   font-size: 0.875rem;
   color: #ffffff;

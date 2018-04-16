@@ -1,6 +1,10 @@
 ﻿@import "../_custom-variables.scss";
 @import "../_custom-mixins.scss";
-
+.group-footer {
+  background: $gray-300;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+}
 .footer {
     font-size: $font-size-sm;
     color: $white;
