@@ -37,27 +37,29 @@
  */
 #}
 
-<div class="hero__content">
-  {% if label_hidden %}
-    {% if multiple %}
-      {% for item in items %}
-        {{ item.content }}
-      {% endfor %}
+<div class="container">
+  <div class="hero__content">
+    {% if label_hidden %}
+      {% if multiple %}
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
+      {% else %}
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
+      {% endif %}
     {% else %}
+      {{ label }}
+      {% if multiple %}
+        <div>
+      {% endif %}
       {% for item in items %}
         {{ item.content }}
       {% endfor %}
+      {% if multiple %}
+        </div>
+      {% endif %}
     {% endif %}
-  {% else %}
-    {{ label }}
-    {% if multiple %}
-      <div>
-    {% endif %}
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  {% endif %}
+  </div>
 </div>
