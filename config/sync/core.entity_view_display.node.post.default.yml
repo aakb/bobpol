@@ -41,8 +41,8 @@ third_party_settings:
       header:
         - node_title
         - field_image
-      left:
         - node_changed_date
+      left:
         - body
       right:
         - field_category
@@ -53,8 +53,8 @@ third_party_settings:
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 2
-        label: hidden
+        weight: 3
+        label: inline
         formatter: ds_post_date_long
       node_title:
         plugin_id: node_title
@@ -73,7 +73,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: left

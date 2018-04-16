@@ -5740,6 +5740,9 @@ nav.navbar {
     width: 200%;
     background: #fff; }
 
+.timestamp {
+  display: block; }
+
 .toolbar-oriented .toolbar-bar {
   z-index: 2000; }
 
