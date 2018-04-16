@@ -1,7 +1,0 @@
-cookie_name: accept_cookies
-cookie_lifetime: '31536000'
-da:
-  text: 'Vi bruger cookies til at forbedre din brugeroplevelse'
-  read_more_url: /information-om-cookies
-  read_more_text: 'Læs mere om cookies'
-  accept_button_text: 'Godkend cookies'
