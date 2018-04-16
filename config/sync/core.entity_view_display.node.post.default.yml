@@ -72,19 +72,17 @@ mode: default
 content:
   body:
     label: hidden
-    type: text_trimmed
+    type: text_default
     weight: 3
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     region: left
   field_category:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     weight: 4
     region: right
-    label: above
+    label: hidden
     settings:
-      view_mode: default
       link: false
     third_party_settings: {  }
   field_comments:
