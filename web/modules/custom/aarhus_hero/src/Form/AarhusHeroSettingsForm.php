@@ -68,7 +68,7 @@ class AarhusHeroSettingsForm extends FormBase {
     $form['hero']['hero_image'] = array(
       '#title' => $this->t('Hero image'),
       '#type' => 'managed_file',
-      '#default_value' => array($config->get('hero_image')),
+      '#default_value' => !empty($config->get('hero_image')) ? array($config->get('hero_image')) : NULL,
       '#upload_location' => 'public://',
       '#weight' => '3',
       '#open' => TRUE,
@@ -88,7 +88,7 @@ class AarhusHeroSettingsForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Load the file set in the form.
-    $value = $form_state->getValue('hero_image')[0];
+    $value = !empty($form_state->getValue('hero_image')[0]) ? $form_state->getValue('hero_image')[0] : NULL;
     $file = ($value) ? File::load($value) : FALSE;
 
     // If a file is set.
@@ -100,7 +100,7 @@ class AarhusHeroSettingsForm extends FormBase {
     $this->getBaseConfig()->setMultiple(array(
       'hero_title' => $form_state->getValue('hero_title'),
       'hero_text' => $form_state->getValue('hero_text'),
-      'hero_image'=> $form_state->getValue('hero_image')[0],
+      'hero_image'=> !empty($form_state->getValue('hero_image')[0]) ? $form_state->getValue('hero_image')[0] : NULL,
     ));
 
     drupal_flush_all_caches();

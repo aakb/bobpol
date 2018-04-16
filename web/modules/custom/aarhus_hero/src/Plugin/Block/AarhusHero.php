@@ -25,6 +25,7 @@ class AarhusHero extends BlockBase {
   public function build() {
     $config = \Drupal::getContainer()->get('aarhus_hero.hero_config')->getAll();
     $file = ($config['hero_image']) ? File::load($config['hero_image']) : FALSE;
+    
     return array(
       '#type' => 'markup',
       '#theme' => 'aarhus_hero_block',
@@ -32,7 +33,7 @@ class AarhusHero extends BlockBase {
       '#image' => array (
         '#theme' => 'image_style',
         '#style_name' => 'hero',
-        '#uri' => isset($file) ? $file->getFileUri() : FALSE,
+        '#uri' => !empty($file) ? $file->getFileUri() : FALSE,
         '#alt' => $config['hero_title'],
         '#attributes' => array (
           'class' => 'hero__media'
