@@ -32,7 +32,7 @@ class AarhusHero extends BlockBase {
       '#image' => array (
         '#theme' => 'image_style',
         '#style_name' => 'hero',
-        '#uri' => $file->getFileUri() ? $file->getFileUri() : FALSE,
+        '#uri' => isset($file) ? $file->getFileUri() : FALSE,
         '#alt' => $config['hero_title'],
         '#attributes' => array (
           'class' => 'hero__media'
