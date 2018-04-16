@@ -3,3 +3,5 @@ type: module
 description: 'Adds hotness marker for nodes'
 package: Bobpol
 core: '8.x'
+dependencies:
+  - flag
