@@ -15,10 +15,15 @@
 @import 'partials/_footer';
 @import 'partials/_content';
 @import 'partials/_drupal';
+@import 'partials/_utilities';
 
 // Global styles
 
 body {
     background: $gray-100;
     padding-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, legend {
+  text-transform: uppercase;
 }

@@ -43,14 +43,15 @@
  * @see html.html.twig
  */
 #}
-<div class="container-fluid">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+  <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     {{ page.header }}
-  </nav>
-</div>
+    <a href="/user" class="btn btn-primary rounded-circle float-right"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
 
 {% if page.hero %}
   {{ page.hero }}
