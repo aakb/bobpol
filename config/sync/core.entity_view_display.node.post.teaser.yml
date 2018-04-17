@@ -9,26 +9,18 @@ dependencies:
     - field.field.node.post.field_comments
     - field.field.node.post.field_hotness
     - field.field.node.post.field_image
+    - field.field.node.post.field_teaser
     - image.style.card
     - node.type.post
   module:
     - image
     - options
-    - text
     - user
 id: node.post.teaser
 targetEntityType: node
 bundle: post
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_trimmed
-    weight: 0
-    settings:
-      trim_length: 200
-    third_party_settings: {  }
-    region: content
   field_category:
     type: entity_reference_label
     weight: 5
@@ -53,6 +45,13 @@ content:
       image_style: card
       image_link: ''
     third_party_settings: {  }
+  field_teaser:
+    type: basic_string
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   flag_promote:
     weight: 3
     region: content
@@ -64,5 +63,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_comments: true
   langcode: true

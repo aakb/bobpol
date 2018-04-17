@@ -75,7 +75,7 @@
   <a href="{{ url }}">{{ content.field_image }}</a>
   <div class="card-body">
     <h5 class="card-title"><a href="{{ url }}">{{ label }}</a></h5>
-    <p class="card-text">{{ content.body }}</p>
+    <p class="card-text">{{ content.field_teaser }}</p>
     <div class="card-link">{{ content.links }}</div>
   </div>
   <div class="card-footer container">
@@ -85,7 +85,7 @@
         <div class="card-comment-count">{% trans %}Comments{% endtrans %}: {{ comment_count }}</div>
       </div>
       <div class="col">
-        {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness') }}
+        {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness', 'field_teaser') }}
       </div>
     </small>
   </div>

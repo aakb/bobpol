@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.static_page.body
     - field.field.node.static_page.field_comments
     - field.field.node.static_page.field_image
+    - field.field.node.static_page.field_teaser
     - image.style.hero
     - node.type.static_page
   module:
@@ -37,12 +38,13 @@ third_party_settings:
         - node_title
         - field_image
       left:
+        - field_teaser
         - body
         - node_changed_date
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 3
+        weight: 4
         label: inline
         formatter: ds_post_date_long
       node_title:
@@ -62,7 +64,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: left
@@ -75,6 +77,13 @@ content:
     third_party_settings: {  }
     type: image
     region: header
+  field_teaser:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: left
 hidden:
   field_comments: true
   langcode: true
