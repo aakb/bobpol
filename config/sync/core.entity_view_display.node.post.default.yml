@@ -15,7 +15,6 @@ dependencies:
     - comment
     - ds
     - image
-    - options
     - text
     - user
 third_party_settings:
@@ -41,13 +40,12 @@ third_party_settings:
       header:
         - node_title
         - field_image
-        - node_changed_date
       left:
         - body
+        - node_changed_date
       right:
         - field_category
         - flag_promote
-        - field_hotness
       footer:
         - field_comments
     fields:
@@ -62,7 +60,7 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          wrapper: h1
+          wrapper: ''
           class: ''
           link: false
 id: node.post.default
@@ -86,7 +84,7 @@ content:
       link: false
     third_party_settings: {  }
   field_comments:
-    weight: 7
+    weight: 6
     label: above
     settings:
       view_mode: default
@@ -94,13 +92,6 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: footer
-  field_hotness:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: right
   field_image:
     weight: 1
     label: hidden
@@ -116,5 +107,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_hotness: true
   langcode: true
   links: true

@@ -36,12 +36,12 @@ third_party_settings:
       header:
         - node_title
         - field_image
-        - node_post_date
       left:
         - body
+        - node_changed_date
     fields:
-      node_post_date:
-        plugin_id: node_post_date
+      node_changed_date:
+        plugin_id: node_changed_date
         weight: 3
         label: inline
         formatter: ds_post_date_long

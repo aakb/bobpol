@@ -26,6 +26,15 @@ settings:
           name: Format
           items:
             - Format
+        -
+          name: Extras
+          items:
+            - Blockquote
+            - DrupalImage
+            - Table
+            - BulletedList
+            - NumberedList
+            - HorizontalRule
   plugins:
     stylescombo:
       styles: ''

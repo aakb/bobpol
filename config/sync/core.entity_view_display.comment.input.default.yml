@@ -19,8 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    region: content
 hidden:
   langcode: true
+  links: true
