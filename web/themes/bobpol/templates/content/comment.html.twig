@@ -85,7 +85,7 @@
       </p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">{{ submitted }}</small>
+      <small class="text-muted">{% trans %}By{% endtrans %} {{ author|striptags }} {{ created.value|date('U')|format_date('long') }}</small>
       {#
         Indicate the semantic relationship between parent and child comments for
         accessibility. The list is difficult to navigate in a screen reader

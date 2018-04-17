@@ -32,7 +32,13 @@ function bobpol_theme_suggestions_form_element_alter(array &$suggestions, array 
 }
 
 function bobpol_preprocess_field(&$variables) {
-  $a =1;
+  $uid = \Drupal::currentUser()->id();
+  if ($variables['field_name'] == 'field_comments') {
+    $variables['user_anonymous'] = FALSE;
+    if ($uid == 0) {
+      $variables['user_anonymous'] = TRUE;
+    }
+  }
 }
 
 function _bobpol_allowed_formats_remove_textarea_help($form_element, FormStateInterface $form_state) {
