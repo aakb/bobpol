@@ -31,7 +31,7 @@
     {% if comments and not label_hidden %}
     <div class="col-md-12">
       {{ title_prefix }}
-      <h2{{ title_attributes }}>{% trans %}Contribute{% endtrans %}</h2>
+      <h2{{ title_attributes.addClass('mb-3') }}>{% trans %}Contribute{% endtrans %}</h2>
       {{ title_suffix }}
     </div>
     {% endif %}
@@ -39,7 +39,7 @@
     {{ comments }}
 
     {% if comment_form %}
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
       <h3{{ content_attributes }}>{{ 'Add contribution'|t }}</h3>
       <div class="form-group">{{ comment_form }}</div>
     </div>

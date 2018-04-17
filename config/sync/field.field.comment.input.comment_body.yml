@@ -11,7 +11,7 @@ id: comment.input.comment_body
 field_name: comment_body
 entity_type: comment
 bundle: input
-label: Comment
+label: Contribution
 description: ''
 required: true
 translatable: true
