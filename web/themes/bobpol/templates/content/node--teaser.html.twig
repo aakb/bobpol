@@ -71,10 +71,10 @@
  */
 #}
 
-<div class="card mb-5 hotness-{{ content.field_hotness.0['#markup'] ? content.field_hotness.0['#markup']|striptags : 1}}">
+<div class="card mb-5 {#hotness-{{ content.field_hotness.0['#markup'] ? content.field_hotness.0['#markup']|striptags : 1}}#}">
   <a href="{{ url }}">{{ content.field_image }}</a>
   <div class="card-body">
-    <h5 class="card-title"><a href="{{ url }}">{{ label }}</a></h5>
+    <h5 class="card-title"><a href="{{ url }}" class="title">{{ label }}</a></h5>
     <p class="card-text">{{ content.field_teaser }}</p>
     <div class="card-link">{{ content.links }}</div>
   </div>

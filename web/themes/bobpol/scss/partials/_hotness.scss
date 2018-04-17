@@ -1,19 +1,37 @@
-.btn.hotness-1{
+.hotness {
+  &-legend {
+    label, > div {
+      display: inline-block;
+    }
+    label {
+      padding-right: $spacer;
+    }
+    span.badge {
+      display: inline-block;
+      width: 1rem;
+      height: .75rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.hotness-1{
   background-color: $blue;
 }
 
-.btn.hotness-2{
+.hotness-2{
   background-color: $petroleum;
 }
 
-.btn.hotness-3{
+.hotness-3{
   background-color: $purple;
 }
 
-.btn.hotness-4{
+.hotness-4{
   background-color: $orange;
 }
 
-.btn.hotness-5{
+.hotness-5{
   background-color: $pink;
 }

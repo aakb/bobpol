@@ -6034,6 +6034,8 @@ nav.navbar {
 
 .card {
   border-bottom: 2px solid #d6d6d6; }
+  .card-title .title {
+    color: #333333; }
   .card .card-img-top {
     height: 10rem;
     background-size: cover;
@@ -6155,19 +6157,32 @@ nav.navbar {
   .underlined--primary:after {
     background: #3661d8; }
 
-.btn.hotness-1 {
+.hotness-legend label, .hotness-legend > div {
+  display: inline-block; }
+
+.hotness-legend label {
+  padding-right: 1rem; }
+
+.hotness-legend span.badge {
+  display: inline-block;
+  width: 1rem;
+  height: .75rem;
+  margin: 0;
+  padding: 0; }
+
+.hotness-1 {
   background-color: #3661d8; }
 
-.btn.hotness-2 {
+.hotness-2 {
   background-color: #008486; }
 
-.btn.hotness-3 {
+.hotness-3 {
   background-color: #673ab7; }
 
-.btn.hotness-4 {
+.hotness-4 {
   background-color: #ff5f31; }
 
-.btn.hotness-5 {
+.hotness-5 {
   background-color: #ee0043; }
 
 body {
