@@ -31,6 +31,10 @@ function bobpol_theme_suggestions_form_element_alter(array &$suggestions, array 
   }
 }
 
+function bobpol_preprocess_field(&$variables) {
+  $a =1;
+}
+
 function _bobpol_allowed_formats_remove_textarea_help($form_element, FormStateInterface $form_state) {
 
   if (isset($form_element[0]['format'])) {

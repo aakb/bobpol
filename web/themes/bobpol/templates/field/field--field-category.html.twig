@@ -36,27 +36,26 @@
  * @see template_preprocess_field()
  */
 #}
-<div class="badge badge-secondary">
-  {% if label_hidden %}
-    {% if multiple %}
-      {% for item in items %}
-        {{ item.content }}
-      {% endfor %}
-    {% else %}
-      {% for item in items %}
-        {{ item.content }}
-      {% endfor %}
-    {% endif %}
-  {% else %}
-    {{ label }}
-    {% if multiple %}
-      <div>
-    {% endif %}
+
+{% if label_hidden %}
+  {% if multiple %}
     {% for item in items %}
       {{ item.content }}
     {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
+  {% else %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
   {% endif %}
-</div>
+{% else %}
+  {{ label }}
+  {% if multiple %}
+    <div>
+  {% endif %}
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+  {% if multiple %}
+    </div>
+  {% endif %}
+{% endif %}

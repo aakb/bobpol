@@ -82,7 +82,7 @@
     <small class="text-muted row">
       <div class="col">
         <div class="card-category">{{ content.field_category }}</div>
-        <div class="card-comment-count">{% trans %}Comment count{% endtrans %}: {{ comment_count }}</div>
+        <div class="card-comment-count">{% trans %}Comments{% endtrans %}: {{ comment_count }}</div>
       </div>
       <div class="col">
         {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness') }}

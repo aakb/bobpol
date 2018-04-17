@@ -42,11 +42,11 @@
     {% if label_hidden %}
       {% if multiple %}
         {% for item in items %}
-          {{ item.content }}
+          <h1 class="title underlined hero__title">{{ item.content }}</h1>
         {% endfor %}
       {% else %}
         {% for item in items %}
-          {{ item.content }}
+          <h1 class="title underlined hero__title">{{ item.content }}</h1>
         {% endfor %}
       {% endif %}
     {% else %}
@@ -55,7 +55,7 @@
         <div>
       {% endif %}
       {% for item in items %}
-        {{ item.content }}
+        <h1 class="title underlined hero__title">{{ item.content }}</h1>
       {% endfor %}
       {% if multiple %}
         </div>
