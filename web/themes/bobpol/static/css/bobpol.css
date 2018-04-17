@@ -6185,6 +6185,14 @@ nav.navbar {
 .hotness-5 {
   background-color: #ee0043; }
 
+.alert {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  margin: 0;
+  top: 96px;
+  left: 0; }
+
 body {
   background: #f6f6f6;
   padding-top: 5rem; }
