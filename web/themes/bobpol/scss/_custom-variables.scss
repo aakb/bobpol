@@ -96,10 +96,10 @@ $line-height-base:                  1.5 !default;
 $headings-line-height:              1.4 !default;
 $headings-font-weight:              700 !default;
 
-// $font-size-base:                    17px !default;
-// $font-size-large:                   20px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
-// $font-size-small:                   15px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
-// $font-size-xs:                      12px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
+//$font-size-base:                    17px !default;
+$font-size-large:                   20px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
+$font-size-small:                   15px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
+$font-size-xs:                      12px !default; //This can not be rem before we use Bootstrap 4 - it's used somewhere else as px.
 
 // $font-size-icon:                    20px !default;
 // $font-size-icon-large:              30px !default;
@@ -107,9 +107,9 @@ $headings-font-weight:              700 !default;
 // $font-size-icon-small:              16px !default;
 // $font-size-icon-xsmall:             12px !default;
 
-// $font-size-title:                   4.0rem !default;
-// $font-size-teaser:                  1.625rem !default; //26px
-// $font-size-teaser-responsive:       1.25rem !default; //20px
+$font-size-title:                   4.0rem !default;
+$font-size-teaser:                  1.625rem !default; //26px
+$font-size-teaser-responsive:       1.25rem !default; //20px
 
 $font-size-h1:                      2.375rem !default; //38px
 $font-size-h1-responsive:           1.5rem !default; //25px

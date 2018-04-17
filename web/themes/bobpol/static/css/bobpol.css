@@ -5485,6 +5485,18 @@ nav.navbar {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
 
+.navbar-brand {
+  margin-right: 2rem; }
+
+.navbar-nav .nav-item {
+  border-bottom: 2px solid transparent; }
+  .navbar-nav .nav-item .nav-link {
+    font-weight: 900;
+    color: #333333;
+    text-transform: uppercase; }
+  .navbar-nav .nav-item.active {
+    border-color: #333333; }
+
 /*Icons*/
 /**
  * Computes a CSS calc function that betweens a value from
