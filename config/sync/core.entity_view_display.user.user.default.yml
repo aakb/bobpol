@@ -1,0 +1,55 @@
+uuid: 5f4e3e6f-fcb3-4279-861d-a8235f2aa54c
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_valid
+    - field.field.user.user.field_validation_date
+  module:
+    - datetime
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_first_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_valid:
+    weight: 3
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_validation_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true
+  member_for: true

@@ -1,0 +1,27 @@
+uuid: 887dd42f-3519-4a9d-ac8b-55a10a2a349f
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bobpol
+id: faner
+theme: bobpol
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Faner
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: false
+    context_mapping: {  }

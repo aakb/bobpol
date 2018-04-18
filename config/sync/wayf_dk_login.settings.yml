@@ -1,0 +1,16 @@
+service_mode: test
+alter_login_form: 0
+icon: wayf_logo.png
+sp_organizations_list_url: 'https://wayf.wayf.dk/module.php/wayf/idpTilTjeneste.php'
+sp_organizations_name_language: da
+user_create_modules:
+  wayf_dk_login: wayf_dk_login
+login_redirect: /
+_core:
+  default_config_hash: qKjDvO-09F1Kpad2utRh1EIwNWjwpxnB_56l7V2uRwY
+sp_entityid: 'http://bobpol.vm'
+sp_endpoint: 'http://bobpol.vm/wayf/consume'
+sp_logout_endpoint: 'http://bobpol.vm/wayf/logout'
+sp_organizations_url: 'http://bobpol.vm'
+sp_organizations_list: '{"https:\/\/testidp.wayf.dk\/module.php\/core\/loginuserpass.php":{"da":"WAYF test-institution (IDP)","en":"WAYF test-institution (IDP)","schacHomeOrganization":"testidp.wayf.dk"}}'
+langcode: da
