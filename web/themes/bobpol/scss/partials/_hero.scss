@@ -89,7 +89,25 @@ $hero-breakpoint:   "sm";
         }
     }
 
-    &__media {
+    // &__media {
+    //     @include transition-std(transform, ease-in-out, 300ms);
+    //     will-change: transform;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     max-width: 100%; //For slimmage resizing
+    //     height: 100% !important; //important, for overriding azure video
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // }
+    .hero__media {
+      img {
+        //To hide blur on fade-in image
+        width: 104% !important;
+        max-width: 104% !important;
+
         @include transition-std(transform, ease-in-out, 300ms);
         will-change: transform;
         position: absolute;
@@ -101,12 +119,6 @@ $hero-breakpoint:   "sm";
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
-    .hero__media {
-      img {
-        //To hide blur on fade-in image
-        width: 104% !important;
-        max-width: 104% !important;
 
         @include media-breakpoint-up($hero-breakpoint) {
           height: 104% !important;
