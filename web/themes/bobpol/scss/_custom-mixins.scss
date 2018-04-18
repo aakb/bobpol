@@ -59,7 +59,7 @@
 
 //Used to reset umbraco grid bootstrap grid setup, so that element will cover full width.
 //Use on the root class - ex. "grid-element__hero" / "grid-element__hotspots"
-@mixin umbraco-grid-full-width() {
+/* @mixin umbraco-grid-full-width() {
     > .container {
         width: auto;
         padding: 0;
@@ -70,10 +70,10 @@
             padding: 0;
         }
     }
-}
+} */
 
 /*Icons*/
-@mixin icon-plus() {
+/* @mixin icon-plus() {
     content: "+";
 }
 
@@ -128,7 +128,7 @@
 @mixin icon-external-link() {
     font-family: $icons-font-family;
     content: "\e90a";
-}
+} */
 
 
 @mixin transition-std($target: all, $ease: ease-in-out, $duration: 200ms, $delay: 0ms) {
