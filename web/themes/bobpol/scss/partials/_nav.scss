@@ -6,14 +6,29 @@ nav.navbar {
 }
 .navbar-nav {
   .nav-item {
-    border-bottom: 2px solid transparent;
     .nav-link {
+      font-size: 1rem;
+      position: relative;
+      display: block;
       font-weight: $font-weight-black;
       color: $black;
       text-transform: uppercase;
-    }
-    &.active {
-      border-color: $black;
+      &:before {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        height: 4px;
+        left: 8px;
+        right: 8px;
+        bottom: 0;
+        background: $primary;
+      }
+      &:hover, &.is-active {
+        color: $black;
+        &:before {
+          opacity: 1;
+        }
+      }
     }
   }
 }

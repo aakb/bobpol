@@ -29,11 +29,12 @@
     type=='warning' ? 'alert-warning',
     type=='status' ? 'alert-success',
     'alert',
-    'row',
-    'alert-dismissable'
+    'alert-dismissable',
+    'fixed'
   ]
   %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label').addClass(classes) }}>
+    <div class="container">
     {% if type == 'error' %}
       <div role="alert">
     {% endif %}
@@ -56,4 +57,5 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+    </div>
 {% endfor %}

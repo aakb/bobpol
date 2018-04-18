@@ -1,0 +1,10 @@
+.alert {
+  &.fixed {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    margin: 0;
+    top: 96px;
+    left: 0;
+  }
+}
