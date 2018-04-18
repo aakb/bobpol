@@ -1,0 +1,5 @@
+services:
+  bobpol_user.route_subscriber:
+    class: Drupal\bobpol_user\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
