@@ -29,7 +29,8 @@
     type=='warning' ? 'alert-warning',
     type=='status' ? 'alert-success',
     'alert',
-    'alert-dismissable'
+    'alert-dismissable',
+    'fixed'
   ]
   %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label').addClass(classes) }}>

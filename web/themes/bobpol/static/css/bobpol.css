@@ -6185,7 +6185,7 @@ nav.navbar {
 .hotness-5 {
   background-color: #ee0043; }
 
-.alert {
+.alert.fixed {
   position: fixed;
   z-index: 10000;
   width: 100%;
