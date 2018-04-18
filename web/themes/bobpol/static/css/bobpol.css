@@ -5880,6 +5880,14 @@ nav.navbar {
 
 .navbar-brand {
   margin-right: 2rem; }
+  .navbar-brand img {
+    height: 70px;
+    -webkit-transition: height .4s ease-out;
+    transition: height .4s ease-out; }
+    .scrolled .navbar-brand img {
+      height: 50px;
+      -webkit-transition: height .2s ease-in;
+      transition: height .2s ease-in; }
 
 .navbar-nav .nav-item .nav-link {
   font-size: 1rem;
