@@ -3,6 +3,15 @@ nav.navbar {
 }
 .navbar-brand {
   margin-right: $spacer*2;
+
+  img {
+    height: 70px;
+    transition: height .4s ease-out;
+    .scrolled & {
+      height: 50px;
+      transition: height .2s ease-in;
+    }
+  }
 }
 .navbar-nav {
   .nav-item {

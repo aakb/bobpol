@@ -3,7 +3,7 @@
 $hero-breakpoint:   "sm";
 
 .grid-element__hero-image {
-    @include umbraco-grid-full-width;
+    // @include umbraco-grid-full-width;
 
     //Hover animation
     &:hover,
