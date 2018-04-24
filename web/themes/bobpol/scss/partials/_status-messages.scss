@@ -6,5 +6,10 @@
     margin: 0;
     top: 96px;
     left: 0;
+    transition: top .4s ease-out;
+    .scrolled & {
+      top: 62px;
+      transition: top .2s ease-in;
+    }
   }
 }

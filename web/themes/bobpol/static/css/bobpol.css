@@ -6482,7 +6482,13 @@ nav.navbar {
   width: 100%;
   margin: 0;
   top: 96px;
-  left: 0; }
+  left: 0;
+  -webkit-transition: top .4s ease-out;
+  transition: top .4s ease-out; }
+  .scrolled .alert.fixed {
+    top: 62px;
+    -webkit-transition: top .2s ease-in;
+    transition: top .2s ease-in; }
 
 body {
   background: #f6f6f6;
