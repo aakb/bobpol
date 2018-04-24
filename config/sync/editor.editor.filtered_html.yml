@@ -41,10 +41,10 @@ settings:
     language:
       language_list: un
 image_upload:
-  status: false
+  status: true
   scheme: public
-  directory: inline-images
+  directory: images
   max_size: ''
   max_dimensions:
-    width: null
+    width: 1460
     height: null

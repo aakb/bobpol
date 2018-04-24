@@ -24,6 +24,8 @@ class BobpolUserThemeNegotiator implements ThemeNegotiatorInterface {
     switch ($route->getRouteName()) {
       case 'entity.user.edit_form':
         return true;
+      case 'entity.user.cancel_form':
+        return true;
     }
     return false;
   }
