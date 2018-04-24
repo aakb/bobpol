@@ -1,0 +1,5 @@
+services:
+  bobpol_user_validation_subscriber:
+    class: Drupal\bobpol_user_validate\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,7 @@
+name: BOB-Politik user validation (ADFS)
+type: module
+description: 'Validate users based on ADFS login process'
+package: Bobpol
+core: 8.x
+dependencies:
+  - samlauth
