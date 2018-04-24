@@ -1,5 +1,7 @@
 <?php
 
 function bobpol_user_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $a =1;
+  $form['language']['#access'] = FALSE;
+  $form['#prefix'] = '<div class="content group-left col-md-8">';
+  $form['#suffix'] = '</div>';
 }

@@ -45,5 +45,8 @@
     {{ content }}
   {% endblock %}
   <hr class="d-md-none">
+  {% if (user.id > 0) %}
+  <a href="/user/logout" class="mr-3">{{ 'Log out'|t }}</a>
+  {% endif %}
   <a href="/user" class="btn btn-primary rounded-circle"><i class="fas fa-user"></i></a>
 </div>

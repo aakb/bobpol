@@ -48,7 +48,7 @@
   <div>
     {% if user_anonymous %}
       <div class="alert alert-primary mt-3" role="alert">
-        {% trans %}If you wan't to participate in the discussion you must create a user{% endtrans %} <a class="btn btn-sm btn-primary ml-3" href="/user">{% trans %}Create user{% endtrans %}</a>
+        {{ 'If you wan\'t to participate in the discussion you must create a user'|t }} <a class="btn btn-sm btn-primary ml-3" href="/user">{{ 'Create user'|t }}</a>
       </div>
     {% endif %}
   </div>
