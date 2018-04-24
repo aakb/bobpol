@@ -6247,6 +6247,9 @@ nav.navbar {
     min-height: 11rem; }
   .card img {
     width: 100%; }
+  .card.nemid-validation {
+    background: #c2cff3;
+    border: 2px solid #3661d8; }
 
 /* @mixin umbraco-grid-full-width() {
     > .container {

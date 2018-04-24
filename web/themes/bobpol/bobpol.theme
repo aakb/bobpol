@@ -84,7 +84,7 @@ function bobpol_preprocess_field(&$variables) {
  * Implements hook_preprocess_menu_local_task().
  */
 function bobpol_preprocess_menu_local_task(&$variables) {
-  $variables['link']['#options']['attributes']['class'][] = 'btn btn-category';
+  $variables['link']['#options']['attributes']['class'][] = 'nav-link';
   if (isset($variables['is_active']) && $variables['is_active'] == TRUE) {
     $variables['link']['#options']['attributes']['class'][] = 'active';
   }
