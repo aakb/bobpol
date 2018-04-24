@@ -1,6 +1,0 @@
-name: WAYF.dk Login
-type: module
-description: 'Implements WAYF.dk login.'
-version: VERSION
-core: 8.x
-configure: wayf_dk_login.settings

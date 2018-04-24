@@ -1,0 +1,7 @@
+bobpol_user_validate.saml.login:
+  path: '/user/validate'
+  defaults:
+    _controller: '\Drupal\bobpol_user_validate\Controller\BobPolUserValidateSAMLController::login'
+  requirements:
+    _permission: 'access content'
+    _content_type_format: text/html
