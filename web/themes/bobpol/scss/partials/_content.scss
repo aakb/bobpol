@@ -14,9 +14,18 @@
 }
 
 .content__main {
-
+  @include media-breakpoint-up(sm) {
+    padding-right: 2em;
+  }
+  img {
+    @extend .img-fluid;
+  }
 }
 
 .timestamp {
   display: block;
+}
+
+.lead {
+  padding: 1em 0;
 }

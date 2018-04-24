@@ -1,5 +1,10 @@
 nav.navbar {
-  box-shadow: 0 0 10px rgba(0,0,0,.25)
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
+  transition: padding .4s ease-out;
+  .scrolled & {
+    padding: 0.1rem 1rem;
+    transition: padding .2s ease-in;
+  }
 }
 .navbar-brand {
   margin-right: $spacer*2;
@@ -22,20 +27,22 @@ nav.navbar {
       font-weight: $font-weight-black;
       color: $black;
       text-transform: uppercase;
-      &:before {
-        opacity: 0;
-        content: "";
-        position: absolute;
-        height: 4px;
-        left: 8px;
-        right: 8px;
-        bottom: 0;
-        background: $primary;
-      }
-      &:hover, &.is-active {
-        color: $black;
+      @include media-breakpoint-up(lg) {
         &:before {
-          opacity: 1;
+          opacity: 0;
+          content: "";
+          position: absolute;
+          height: 4px;
+          left: 8px;
+          right: 8px;
+          bottom: 0;
+          background: $primary;
+        }
+        &:hover, &.is-active {
+          color: $black;
+          &:before {
+            opacity: 1;
+          }
         }
       }
     }

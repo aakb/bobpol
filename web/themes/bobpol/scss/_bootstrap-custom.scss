@@ -58,6 +58,13 @@ $font-size-base: 1.125rem;
 $lead-font-size: 1.625rem;
 $lead-font-weight: 400;
 
+$h1-font-size:                $font-size-base * 2.2;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.2;
+$h4-font-size:                $font-size-base * 1.1;
+$h5-font-size:                $font-size-base * 1.0;
+$h6-font-size:                $font-size-base;
+
 // Disable rounded corners
 $enable-rounded: false;
 
@@ -101,4 +108,4 @@ $card-inner-border-radius: 0;
 // @import "../node_modules/bootstrap/scss/_popover.scss";
 // @import "../node_modules/bootstrap/scss/_carousel.scss";
 @import "../node_modules/bootstrap/scss/_utilities.scss";
-// @import "../node_modules/bootstrap/scss/_print.scss";
+@import "../node_modules/bootstrap/scss/_print.scss";
