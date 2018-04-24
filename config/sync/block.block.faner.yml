@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - system
+    - user
   theme:
     - bobpol
 id: faner
@@ -25,3 +26,10 @@ visibility:
     pages: "/user/register\r\n/user/login\r\n/user/password"
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
