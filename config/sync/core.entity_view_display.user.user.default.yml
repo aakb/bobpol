@@ -9,7 +9,34 @@ dependencies:
     - field.field.user.user.field_validation_date
   module:
     - datetime
+    - ds
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_first_name
+        - field_last_name
+      right:
+        - field_validation_date
+        - field_valid
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -22,15 +49,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: left
   field_last_name:
+    type: string
     weight: 1
+    region: left
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_valid:
     weight: 3
     label: hidden
@@ -40,16 +67,15 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
+    region: right
   field_validation_date:
     weight: 2
     label: hidden
     settings:
       timezone_override: ''
-      format_type: long
     third_party_settings: {  }
-    type: datetime_default
-    region: content
+    type: datetime_plain
+    region: right
 hidden:
   langcode: true
   member_for: true

@@ -81,6 +81,13 @@ function bobpol_preprocess_field(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_field().
+ */
+function bobpol_preprocess_comment(&$variables) {
+  $variables['author_name'] = \Drupal\user\Entity\User::load($variables['author_id'])->get('field_first_name')->getValue();
+}
+
+/**
  * Implements hook_preprocess_menu_local_task().
  */
 function bobpol_preprocess_menu_local_task(&$variables) {
