@@ -21,6 +21,9 @@ class RouteSubscriber extends RouteSubscriberBase {
       $route->setDefaults(array(
         '_controller' => '\Drupal\bobpol_user_validate\Controller\BobPolUserValidateSAMLController::acs',
       ));
+      $route->setRequirements(array(
+        '_role' => 'authenticated',
+      ));
     }
 
     if ($route = $collection->get('samlauth.saml_controller_login')) {

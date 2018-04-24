@@ -2,12 +2,15 @@
 
 namespace Drupal\bobpol_user_validate\Controller;
 
+use Drupal\Console\Bootstrap\Drupal;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\samlauth\SamlService;
 use Drupal\samlauth\SamlUserService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use \Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
 /**
  * KobaBookingApiController.
@@ -65,9 +68,12 @@ class BobPolUserValidateSAMLController extends ControllerBase {
    * @return \Symfony\Component\HttpFoundation\RedirectResponse
    */
   public function login(Request $request) {
+
+    $uri = $request->get('ref');
+
     // Set newest booking information.
     $data = array(
-      'url' => $current_path = \Drupal::service('path.current')->getPath(),
+      'uri' => $uri,
       'expire' => \Drupal::time()->getRequestTime() + 300,
     );
 
@@ -91,21 +97,17 @@ class BobPolUserValidateSAMLController extends ControllerBase {
     }
 
     try {
+      // Left here to show how to get the SAML data.
       $saml_data = $this->saml->getData();
 
-      // The mail attribute changes its status from MUST into MAY as of May 2013 - WAYF.
-      if (!empty($saml_data['mail'])) {
-        $data['mail'] = $saml_data['mail'];
-      }
+      $date = DrupalDateTime::createFromTimestamp(\Drupal::time()->getRequestTime(), DateTimeItemInterface::STORAGE_TIMEZONE);
 
-      // Get name.
-      $data['name'] = $saml_data['eduPersonTargetedID'];
-
-      // Get unique wayf ID.
-      //$data['uuid'] = $saml_data['urn:oid:1.3.6.1.4.1.5923.1.1.1.10'];
-
-      \Drupal::service('session')->set('koba_booking_request', $data);
-
+      // User is validated, so lets updated the user fields.
+      $user = \Drupal::currentUser();
+      $user = \Drupal\user\Entity\User::load($user->id());
+      $user->set('field_valid', TRUE);
+      $user->set('field_validation_date', $date->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT));
+      $user->save();
     }
     catch (\Exception $e) {
       $messenger = \Drupal::messenger();
@@ -117,7 +119,7 @@ class BobPolUserValidateSAMLController extends ControllerBase {
     // by the ADFS (or not working). We use an iframe on the add booking page
     // that do the logout - HACK.
     $data = \Drupal::service('session')->get('bobpol_user_validate');
-    $url = empty($data['url']) ? \Drupal\Core\Url::fromRoute('<front>')->toString() : $data['url'];
-    return $this->redirect($url);
+    $uri = empty($data['uri']) ? \Drupal\Core\Url::fromRoute('<front>')->toString() : $data['uri'];
+    return new RedirectResponse($uri);
   }
 }
