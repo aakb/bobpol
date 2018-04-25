@@ -17,5 +17,4 @@ permissions:
   - 'post comments'
   - 'skip comment approval'
   - 'unflag promote'
-  - 'view sp metadata'
   - 'view the administration theme'

@@ -9,8 +9,8 @@ dependencies:
     - bobpol
 id: faner
 theme: bobpol
-region: content
-weight: 0
+region: sidebar
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

@@ -23,9 +23,23 @@ function bobpol_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   }
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bobpol_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $user_pages_anonymous = array(
+    '/user/login',
+    '/user/register',
+    '/user/password'
+  );
+  $current_path = \Drupal::service('path.current')->getPath();
+  if (in_array($current_path, $user_pages_anonymous)) {
+    $suggestions[] = 'page__anonymous_forms';
+  }
+}
 
 /**
- * Implements hook_theme_suggestions_alter().
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
 function bobpol_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   if ($hook == 'form' && !empty($variables['element']['#id'])) {

@@ -13,5 +13,4 @@ permissions:
   - 'access content'
   - 'flag promote'
   - 'unflag promote'
-  - 'view sp metadata'
   - 'view the administration theme'
