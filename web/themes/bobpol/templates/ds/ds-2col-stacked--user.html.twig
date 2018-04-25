@@ -34,7 +34,7 @@
         <div class="content__main ">
           {{ left }}
           {% if (user.field_valid.value == '1') %}
-            <span class="badge badge-primary">{{ 'Validated'|t }} {{ content.field_validation_date }} </span>
+            <p>{{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque mattis nunc id dictum. Maecenas volutpat nibh a turpis scelerisque suscipit. Donec felis nisi, facilisis vel iaculis ac, vehicula eget tortor. Duis tincidunt elit at consectetur maximus. Nunc malesuada, nisi eu blandit auctor, augue velit facilisis nulla, sit amet fringilla nulla urna at nulla. Ut interdum nibh magna, quis imperdiet purus placerat ac. Duis placerat mi nunc, vel vestibulum risus convallis vitae. Vivamus mi sem, tempor pulvinar dui vel, imperdiet molestie dolor.' }}</p>
           {% else %}
             <div class="card mb-3 nemid-validation">
               <div class="card-body">
@@ -57,7 +57,7 @@
         <div class="mb-3">{{ right }}</div>
         <h6>{{ 'User validation'|t }}</h6>
         {% if (user.field_valid.value == '1') %}
-          <p><span class="badge badge-primary">{{ 'Validated with NemID'|t }} {{ content.field_validation_date }} </span></p>
+          <p>{{ 'Validated with NemID'|t }} {{ user.field_validation_date.value|date('j. F Y - H:i') }} </p>
         {% else %}
           <p>{{ 'Not yet validated'|t }}</p>
         {% endif %}

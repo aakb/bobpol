@@ -33,6 +33,14 @@ third_party_settings:
       right:
         - field_first_name
         - field_last_name
+      footer:
+        - 'dynamic_block_field:user-comments'
+    fields:
+      'dynamic_block_field:user-comments':
+        plugin_id: 'dynamic_block_field:user-comments'
+        weight: 2
+        label: hidden
+        formatter: default
 id: user.user.default
 targetEntityType: user
 bundle: user
