@@ -6476,6 +6476,40 @@ nav.navbar {
 .hotness-5 {
   background-color: #ee0043; }
 
+.timeline {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .timeline-points {
+    border-left: 2px solid #525252;
+    padding-top: 2rem;
+    margin-left: 1rem; }
+    .timeline-points .row {
+      position: relative;
+      -webkit-transition: color .4s ease-out;
+      transition: color .4s ease-out; }
+      .timeline-points .row:before {
+        content: "";
+        width: 10px;
+        height: 2px;
+        background: #525252;
+        position: absolute;
+        left: 0;
+        top: 10px; }
+      .timeline-points .row.passed {
+        color: #9d9d9d; }
+    .timeline-points:before, .timeline-points:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #525252;
+      position: absolute;
+      left: -6px; }
+    .timeline-points:before {
+      top: 0; }
+    .timeline-points:after {
+      bottom: 0; }
+
 .alert.fixed {
   position: fixed;
   z-index: 10000;
@@ -6498,3 +6532,6 @@ body {
 
 h1, h2, h3, h4, h5, legend {
   text-transform: uppercase; }
+
+p {
+  max-width: 45rem; }
