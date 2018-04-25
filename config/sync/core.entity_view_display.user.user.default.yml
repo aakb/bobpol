@@ -8,7 +8,6 @@ dependencies:
     - field.field.user.user.field_valid
     - field.field.user.user.field_validation_date
   module:
-    - datetime
     - ds
     - user
 third_party_settings:
@@ -31,12 +30,9 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      left:
+      right:
         - field_first_name
         - field_last_name
-      right:
-        - field_validation_date
-        - field_valid
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -49,33 +45,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: left
+    region: right
   field_last_name:
     type: string
     weight: 1
-    region: left
+    region: right
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_valid:
-    weight: 3
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: right
-  field_validation_date:
-    weight: 2
-    label: hidden
-    settings:
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_plain
-    region: right
 hidden:
+  field_valid: true
+  field_validation_date: true
   langcode: true
   member_for: true

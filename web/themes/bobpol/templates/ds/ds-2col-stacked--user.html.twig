@@ -46,11 +46,23 @@
               </div>
             </div>
           {% endif %}
+
+          <a href="/user/{{ user.id }}/edit" class="btn btn-primary">{{ 'Change user information'|t }}</a>
         </div>
       </{{ left_wrapper }}>
 
       <{{ right_wrapper }}{{ right_attributes.addClass('group-right col-md-4') }}>
-        {{ right }}
+        <h4>{{ 'Your information'|t }}</h4>
+
+        <div class="mb-3">{{ right }}</div>
+        <h6>{{ 'User validation'|t }}</h6>
+        {% if (user.field_valid.value == '1') %}
+          <p><span class="badge badge-primary">{{ 'Validated with NemID'|t }} {{ content.field_validation_date }} </span></p>
+        {% else %}
+          <p>{{ 'Not yet validated'|t }}</p>
+        {% endif %}
+        <h4>{{ 'Options'|t }}</h4>
+        <p><a href="/user/{{ user.id }}/edit">{{ 'Change user information'|t }}</a></p>
       </{{ right_wrapper }}>
     </div>
   </div>
