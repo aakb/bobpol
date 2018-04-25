@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_alter().
  */
-function bobpol_form_alter(&$form, &$form_state, $form_id) {
+function bobpol_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == "views_exposed_form") {
     if (isset($form['combine'])) {
       $form['combine']['#attributes'] = array('data-bef-auto-submit-exclude' => '');
@@ -23,6 +23,7 @@ function bobpol_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+
 /**
  * Implements hook_theme_suggestions_alter().
  */
@@ -30,15 +31,12 @@ function bobpol_theme_suggestions_alter(array &$suggestions, array $variables, $
   if ($hook == 'form' && !empty($variables['element']['#id'])) {
     $user_forms = array(
       'user-login-form',
-      'user-form',
       'user-register-form',
       'user-pass'
     );
     if (in_array($variables['element']['#id'], $user_forms)) {
       $suggestions[] = 'form__user';
     }
-
-    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
   }
 }
 
