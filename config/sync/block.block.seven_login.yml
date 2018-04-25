@@ -10,8 +10,8 @@ _core:
   default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
 id: seven_login
 theme: seven
-region: header
-weight: 0
+region: content
+weight: -1
 provider: null
 plugin: user_login_block
 settings:
