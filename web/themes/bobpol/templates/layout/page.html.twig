@@ -57,7 +57,51 @@
   {{ page.hero }}
 {% endif %}
 
-<div class="container">
+
+{# TODO: Create drupal block element  #}
+<div class="container-fluid bg-white pt-5 pb-5">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Kom til borgermøde</h3>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card bg-light">
+            <div class="card-header">
+              <p class="card-text text-secondary">Samtalesalon med tapas og vin</p>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Åby Bibliotek<br>3. maj kl. 19-21</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card bg-light">
+            <div class="card-header">
+              <p class="card-text text-secondary">Streetfood og leg med politik</p>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Skødstrup Bibliotek<br>15. maj kl. 17-19</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card bg-light">
+            <div class="card-header">
+              <p class="card-text text-secondary">Spis – og byg din egen politik</p>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Dokk1<br>22. maj kl. 17.30-19.30</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-3">
   <div class="row"  >
     <main class="col-md-12" role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}

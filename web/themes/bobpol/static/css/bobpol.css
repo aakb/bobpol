@@ -6236,15 +6236,14 @@ nav.navbar {
     background: #fab2c6; }
 
 .card {
-  border-bottom: 2px solid #d6d6d6; }
+  border-bottom: 2px solid #d6d6d6;
+  width: 100%; }
   .card-title .title {
     color: #333333; }
   .card .card-img-top {
     height: 10rem;
     background-size: cover;
     background-position: center center; }
-  .card .card-body {
-    min-height: 11rem; }
   .card img {
     width: 100%; }
   .card.nemid-validation {

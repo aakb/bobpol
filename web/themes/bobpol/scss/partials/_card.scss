@@ -1,5 +1,6 @@
 .card {
   border-bottom: 2px solid $gray-500;
+  width: 100%;
   &-title {
     .title {
       color: $black;
@@ -10,9 +11,9 @@
     background-size: cover;
     background-position: center center;
   }
-  .card-body {
-    min-height: 11rem;
-  }
+// .card-body {
+//     min-height: 11rem;
+//   }
 
   img {
     width: 100%;
