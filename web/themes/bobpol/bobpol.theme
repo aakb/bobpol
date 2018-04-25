@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_alter().
  */
-function bobpol_form_alter(&$form, &$form_state, $form_id) {
+function bobpol_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == "views_exposed_form") {
     if (isset($form['combine'])) {
       $form['combine']['#attributes'] = array('data-bef-auto-submit-exclude' => '');
@@ -23,12 +23,20 @@ function bobpol_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+
 /**
  * Implements hook_theme_suggestions_alter().
  */
 function bobpol_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
-  if ($hook == 'form' & !empty($variables['element']['#id'])) {
-    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  if ($hook == 'form' && !empty($variables['element']['#id'])) {
+    $user_forms = array(
+      'user-login-form',
+      'user-register-form',
+      'user-pass'
+    );
+    if (in_array($variables['element']['#id'], $user_forms)) {
+      $suggestions[] = 'form__user';
+    }
   }
 }
 
@@ -47,15 +55,6 @@ function bobpol_theme_suggestions_form_element_alter(array &$suggestions, array 
 function bobpol_preprocess_node(&$variables) {
   $variables['comment_count'] = $variables['node']->get('field_comments')->comment_count;
   $variables['flag_count'] = \Drupal::service('flag.count')->getEntityFlagCounts($variables['node']);
-}
-
-/**
- * Implements hook_preprocess_user().
- */
-function bobpol_preprocess_user(&$variables) {
-  $account = $variables['elements']['#user'];
-
-  $variables['username'] = $account->getDisplayName();
 }
 
 /**
