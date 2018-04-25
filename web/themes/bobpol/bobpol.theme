@@ -84,11 +84,16 @@ function bobpol_preprocess_flag(&$variables) {
  * Implements hook_preprocess_field().
  */
 function bobpol_preprocess_field(&$variables) {
-  $uid = \Drupal::currentUser()->id();
+  $current_user = \Drupal::currentUser();
+  $uid = $current_user->id();
   if ($variables['field_name'] == 'field_comments') {
     $variables['user_anonymous'] = FALSE;
     if ($uid == 0) {
       $variables['user_anonymous'] = TRUE;
+    }
+    else {
+      $user = \Drupal\user\Entity\User::load($current_user->id());
+      $variables['user_validated'] = $user->field_valid->getValue()['0']['value'];
     }
   }
 }

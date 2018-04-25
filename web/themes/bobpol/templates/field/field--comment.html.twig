@@ -37,12 +37,13 @@
     {% endif %}
 
     {{ comments }}
-
-    {% if comment_form %}
-    <div class="col-md-12 mt-3">
-      <h3{{ content_attributes }}>{{ 'Add contribution'|t }}</h3>
-      <div class="form-group">{{ comment_form }}</div>
-    </div>
+    {% if user_validated > 0 %}
+      {% if comment_form %}
+      <div class="col-md-12 mt-3">
+        <h3{{ content_attributes }}>{{ 'Add contribution'|t }}</h3>
+        <div class="form-group">{{ comment_form }}</div>
+      </div>
+      {% endif %}
     {% endif %}
   </div>
   <div>
@@ -50,6 +51,18 @@
       <div class="alert alert-primary mt-3" role="alert">
         {{ 'If you wan\'t to participate in the discussion you must create a user'|t }} <a class="btn btn-sm btn-primary ml-3" href="/user/register">{{ 'Create user'|t }}</a>
       </div>
+    {% else %}
+      {% if not user_validated == 1 %}
+        <div class="card mb-3 nemid-validation">
+          <div class="card-body">
+            <h5 class="card-title">{{ 'Validate with NemID'|t }}</h5>
+            <p class="card-text">{{ 'Before you can contribute you must validate your user account with NemID.'|t }}</p>
+            <p class="card-text">{{ 'You only have to do it once, and you can do it now.'|t }}</p>
+            <a href="{{ path('bobpol_user_validate.saml.login', { ref :  path('<current>') }) }}" class="btn btn-primary">{{ 'Validate'|t }}</a>
+            <img class="image-fluid float-right" style="width:auto;" src="/themes/bobpol/static/images/NEMID_RGB_BLACK.svg" alt="NemID logo">
+          </div>
+        </div>
+      {% endif %}
     {% endif %}
   </div>
 </section>
