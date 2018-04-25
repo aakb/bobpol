@@ -44,6 +44,7 @@ function bobpol_theme_suggestions_page_alter(array &$suggestions, array $variabl
 function bobpol_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   if ($hook == 'form' && !empty($variables['element']['#id'])) {
     $user_forms = array(
+      'user-pass-reset',
       'user-login-form',
       'user-register-form',
       'user-pass',
