@@ -1,16 +1,17 @@
-uuid: 77d60427-fbb0-4dbe-ae74-441dda1b8898
+uuid: c0d61d80-78d9-4a63-8d14-7f511f621e40
 langcode: da
 status: true
 dependencies:
   config:
-    - field.field.node.static_page.body
-    - field.field.node.static_page.field_comments
-    - field.field.node.static_page.field_image
-    - field.field.node.static_page.field_sidebar
-    - field.field.node.static_page.field_teaser
-    - image.style.hero
-    - node.type.static_page
+    - core.entity_view_display.comment.input.default
+    - field.field.node.news.body
+    - field.field.node.news.field_comments
+    - field.field.node.news.field_image
+    - field.field.node.news.field_sidebar
+    - field.field.node.news.field_teaser
+    - node.type.news
   module:
+    - comment
     - ds
     - image
     - text
@@ -26,7 +27,7 @@ third_party_settings:
         wrappers:
           header: div
           left: div
-          right: aside
+          right: div
           footer: div
         outer_wrapper: div
         attributes: ''
@@ -44,14 +45,7 @@ third_party_settings:
         - node_changed_date
       right:
         - field_sidebar
-      footer:
-        - 'dynamic_block_field:node-timeline'
     fields:
-      'dynamic_block_field:node-timeline':
-        plugin_id: 'dynamic_block_field:node-timeline'
-        weight: 6
-        label: hidden
-        formatter: default
       node_changed_date:
         plugin_id: node_changed_date
         weight: 4
@@ -66,9 +60,9 @@ third_party_settings:
           wrapper: ''
           class: ''
           link: false
-id: node.static_page.default
+id: node.news.default
 targetEntityType: node
-bundle: static_page
+bundle: news
 mode: default
 content:
   body:
@@ -78,11 +72,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: left
+  field_comments:
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   field_image:
     weight: 0
     label: hidden
     settings:
-      image_style: hero
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -102,6 +105,5 @@ content:
     type: basic_string
     region: left
 hidden:
-  field_comments: true
   langcode: true
   links: true

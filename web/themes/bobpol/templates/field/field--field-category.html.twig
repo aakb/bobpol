@@ -48,13 +48,15 @@
     {% endfor %}
   {% endif %}
 {% else %}
-  {{ label }}
+  <h4>{{ label }}</h4>
   {% if multiple %}
     <div>
   {% endif %}
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
+  <p>
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  </p>
   {% if multiple %}
     </div>
   {% endif %}

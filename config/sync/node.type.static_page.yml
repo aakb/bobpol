@@ -7,12 +7,12 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
       - footer
+      - main
     parent: 'main:'
 name: 'Statisk indhold'
 type: static_page
-description: ''
+description: 'Generelt indhold, ofte tilgængeligt fra en menu'
 help: ''
 new_revision: false
 preview_mode: 0

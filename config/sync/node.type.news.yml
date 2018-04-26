@@ -1,4 +1,4 @@
-uuid: 86f57846-0b1f-4af2-a093-83ce9ba19354
+uuid: 47a10b93-ca9c-4a27-a9f9-0f8630c8a93a
 langcode: da
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Post
-type: post
-description: 'Borgervendt spørgsmål'
+name: Nyhed
+type: news
+description: 'Nyheder og borgermøder'
 help: ''
 new_revision: false
 preview_mode: 0
