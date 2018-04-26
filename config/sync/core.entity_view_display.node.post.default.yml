@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.post.field_comments
     - field.field.node.post.field_hotness
     - field.field.node.post.field_image
+    - field.field.node.post.field_sidebar
     - field.field.node.post.field_teaser
     - image.style.hero
     - node.type.post
@@ -48,6 +49,7 @@ third_party_settings:
       right:
         - field_category
         - flag_promote
+        - field_sidebar
       footer:
         - field_comments
     fields:
@@ -81,12 +83,12 @@ content:
     type: entity_reference_label
     weight: 5
     region: right
-    label: hidden
+    label: above
     settings:
       link: false
     third_party_settings: {  }
   field_comments:
-    weight: 7
+    weight: 8
     label: above
     settings:
       view_mode: default
@@ -103,6 +105,13 @@ content:
     third_party_settings: {  }
     type: image
     region: header
+  field_sidebar:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
   field_teaser:
     weight: 2
     label: hidden

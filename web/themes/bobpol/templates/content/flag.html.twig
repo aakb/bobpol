@@ -26,6 +26,7 @@
 {%
   set classes = [
     'flag',
+    'container',
     'flag-' ~ flag.id()|clean_class,
     'js-flag-' ~ flag.id()|clean_class ~ '-' ~ flaggable.id(),
     action_class
@@ -44,5 +45,5 @@
 {# Set nofollow to prevent search bots from crawling anonymous flag links #}
 {% set attributes = attributes.setAttribute('rel', 'nofollow') %}
 
-<div class="{{classes|join(' ')}}"><a{{ attributes.addClass(classes_att|join(' ')) }}><i class="fas fa-thumbs-up mr-2"></i>{# {{ title }} #} <span class="badge badge-light">{{ flag_count }}</span></a></div>
+<div class="{{classes|join(' ')}}"><p><a{{ attributes.addClass(classes_att|join(' ')) }}><i class="fas fa-thumbs-up mr-2"></i>{# {{ title }} #} <span class="badge badge-light">{{ flag_count }}</span></a></p></div>
 {% endspaceless %}
