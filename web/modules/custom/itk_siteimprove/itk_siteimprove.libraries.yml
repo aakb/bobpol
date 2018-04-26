@@ -1,7 +1,0 @@
-itk-siteimprove:
-  version: 1.0
-  js:
-    js/itk-siteimprove.js: {}
-  dependencies:
-    - core/drupal
-    - core/jquery

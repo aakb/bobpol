@@ -1,4 +1,0 @@
-services:
-  itk_siteimprove.settings:
-    class: Drupal\itk_siteimprove\State\ITKSiteimproveSettings
-    arguments: ['@serialization.json', '@database']
