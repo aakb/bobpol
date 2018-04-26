@@ -1,30 +1,48 @@
 module:
+  aarhus_hero: 0
   better_exposed_filters: 0
   block: 0
+  bobpol_hotness: 0
+  bobpol_timeline: 0
+  bobpol_user: 0
+  bobpol_user_validate: 0
   breakpoint: 0
   ckeditor: 0
   comment: 0
   config_translation: 0
   contextual: 0
+  datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  email_registration: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
   image: 0
+  itk_admin_links: 0
   language: 0
+  layout_discovery: 0
+  link: 0
   locale: 0
+  menu_link_content: 0
+  menu_ui: 0
   node: 0
+  options: 0
   page_cache: 0
+  samlauth: 0
   system: 0
   taxonomy: 0
   text: 0
   toolbar: 0
+  toolbar_visibility: 0
   update: 0
   user: 0
   views_ui: 0
+  ds: 1
+  ds_extras: 2
   views: 10
   minimal: 1000
 theme:

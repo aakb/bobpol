@@ -1,0 +1,5 @@
+bobpol_hotness.admin:
+  title: 'Bobpol hotness'
+  description: 'Setup hotness limits.'
+  route_name: bobpol_hotness.settings
+  parent: user.admin_index

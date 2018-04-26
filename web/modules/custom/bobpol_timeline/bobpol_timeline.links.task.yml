@@ -1,0 +1,4 @@
+bobpol_timeline.admin:
+  title: 'Timeline'
+  route_name: bobpol_timeline.settings
+  base_route: system.admin_content

@@ -1,3 +1,28 @@
+$white:    #fff;
+$gray-100: #f6f6f6;
+$gray-200: #eaeaea;
+$gray-300: #e6e6e6;
+$gray-400: #dfdfdf;
+$gray-500: #d6d6d6;
+$gray-600: #9d9d9d;
+$gray-700: #858585;
+$gray-800: #525252;
+$gray-900: #333333;
+$black:    #000;
+
+$grays: ();
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
 // Set default colors
 $white:                             #ffffff;
 $black:                             #333333;
@@ -23,11 +48,25 @@ $red-light:                         #f2c0c0;
 // Set primary color
 $primary: $blue;
 
-// Set default font
-$font-family-sans-serif: 'Arial Black', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+// Set primary color
+$secondary: $pink;
 
-$lead-font-size: 1.2rem;
+// Set default font
+$font-family-sans-serif: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+
+$font-size-base: 1.125rem;
+$lead-font-size: 1.625rem;
 $lead-font-weight: 400;
+
+$h1-font-size:                $font-size-base * 2.2;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.2;
+$h4-font-size:                $font-size-base * 1.1;
+$h5-font-size:                $font-size-base * 1.0;
+$h6-font-size:                $font-size-base;
+
+// Disable rounded corners
+$enable-rounded: false;
 
 // Set card defaults
 $card-border-radius: 0;
@@ -45,18 +84,18 @@ $card-inner-border-radius: 0;
 // @import "../node_modules/bootstrap/scss/_code.scss";
 @import "../node_modules/bootstrap/scss/_grid.scss";
 @import "../node_modules/bootstrap/scss/_tables.scss";
-// @import "../node_modules/bootstrap/scss/_forms.scss";
+@import "../node_modules/bootstrap/scss/_forms.scss";
 @import "../node_modules/bootstrap/scss/_buttons.scss";
 @import "../node_modules/bootstrap/scss/_transitions.scss";
 // @import "../node_modules/bootstrap/scss/_dropdown.scss";
-// @import "../node_modules/bootstrap/scss/_button-group.scss";
+@import "../node_modules/bootstrap/scss/_button-group.scss";
 // @import "../node_modules/bootstrap/scss/_input-group.scss";
 // @import "../node_modules/bootstrap/scss/_custom-forms.scss";
 @import "../node_modules/bootstrap/scss/_nav.scss";
 @import "../node_modules/bootstrap/scss/_navbar.scss";
 @import "../node_modules/bootstrap/scss/_card.scss";
 // @import "../node_modules/bootstrap/scss/_breadcrumb.scss";
-// @import "../node_modules/bootstrap/scss/_pagination.scss";
+@import "../node_modules/bootstrap/scss/_pagination.scss";
 @import "../node_modules/bootstrap/scss/_badge.scss";
 // @import "../node_modules/bootstrap/scss/_jumbotron.scss";
 @import "../node_modules/bootstrap/scss/_alert.scss";
@@ -69,4 +108,4 @@ $card-inner-border-radius: 0;
 // @import "../node_modules/bootstrap/scss/_popover.scss";
 // @import "../node_modules/bootstrap/scss/_carousel.scss";
 @import "../node_modules/bootstrap/scss/_utilities.scss";
-// @import "../node_modules/bootstrap/scss/_print.scss";
+@import "../node_modules/bootstrap/scss/_print.scss";

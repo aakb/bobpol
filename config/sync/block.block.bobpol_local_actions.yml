@@ -1,5 +1,5 @@
 uuid: 909f409c-a696-471c-9776-a3b9ae8af5a3
-langcode: en
+langcode: da
 status: true
 dependencies:
   theme:
@@ -9,7 +9,7 @@ _core:
 id: bobpol_local_actions
 theme: bobpol
 region: content
-weight: -10
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

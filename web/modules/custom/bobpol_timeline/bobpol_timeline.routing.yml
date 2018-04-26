@@ -1,0 +1,7 @@
+bobpol_timeline.settings:
+  path: '/admin/site-setup/timeline'
+  defaults:
+    _form: '\Drupal\bobpol_timeline\Form\BobpolTimelineConfigForm'
+    _title: 'Bobpol timeline'
+  requirements:
+    _permission: 'access bobpol timeline settings'

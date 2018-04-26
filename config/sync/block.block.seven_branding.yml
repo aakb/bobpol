@@ -1,5 +1,5 @@
 uuid: edffc88d-7d8c-4c49-bdaf-3038765ae27d
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -11,7 +11,7 @@ _core:
 id: seven_branding
 theme: seven
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:

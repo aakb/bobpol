@@ -1,0 +1,9 @@
+services:
+  bobpol_hotness.flag_subscriber:
+    class: Drupal\bobpol_hotness\EventSubscriber\FlagSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  bobpol_hotness.settings:
+    class: Drupal\bobpol_hotness\State\BobpolHotnessSettings
+    arguments: ['@serialization.json', '@database']

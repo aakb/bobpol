@@ -16,7 +16,7 @@ autoprefixer = require('gulp-autoprefixer');
 // Set paths
 var scriptFiles = 'javascripts/*.js',
 scriptDest = 'static/js',
-styleFiles = 'scss/*.scss',
+styleFiles = 'scss/**/*.scss',
 styleDest = 'static/css',
 imgFiles = 'images/**/*.*',
 imgDest = 'static/img',
@@ -58,23 +58,6 @@ gulp.task('fonts', function() {
 gulp.task('icons', function() {
     // return gulp.src('node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/**/*')
     // .pipe(gulp.dest(fontDest + '/fontawesome/'))
-});
-
-// create concatenated js file
-gulp.task('app-scripts', function() {
-    return gulp.src([
-        'javascripts/fa-solid.js',
-        'javascripts/fontawesome.js',
-        'node_modules/jquery/dist/jquery.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js'
-    ])
-    .pipe(gulpif(jsMinify, concat('app.js')))
-    .pipe(gulpif(jsMinify, uglify()))
-    .pipe(gulpif(jsMinify, rename({ suffix: '.min' })))
-    .pipe(gulp.dest(scriptDest))
-    .pipe(browsersync.reload({ // Reload browser with changes
-        stream: true
-    }))
 });
 
 // Copy scripts to static
@@ -138,7 +121,7 @@ gulp.task('browsersync', function() {
 
 // Default task when running gulp
 gulp.task('default', function (callback) {
-    runsequence(['clean', 'fonts', 'icons', 'scripts', 'app-scripts', 'images', 'scss'],
+    runsequence(['clean', 'fonts', 'icons', 'scripts', 'images', 'scss'],
     callback
 )
 });

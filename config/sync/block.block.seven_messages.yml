@@ -1,5 +1,5 @@
 uuid: 6e0adf03-b177-4580-b136-a8a49336c893
-langcode: en
+langcode: da
 status: true
 dependencies:
   module:
@@ -11,7 +11,7 @@ _core:
 id: seven_messages
 theme: seven
 region: header
-weight: 0
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:

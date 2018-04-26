@@ -1,10 +1,11 @@
 uuid: eebd7225-bd39-47f3-92df-fea372e7840e
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.storage.node.body
+    - node.type.post
     - taxonomy.vocabulary.subjects
   module:
     - better_exposed_filters
@@ -59,12 +60,7 @@ display:
               allow_secondary: false
               secondary_label: 'Avancerede indstillinger'
               autosubmit: true
-              autosubmit_hide: false
-            combine:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
+              autosubmit_hide: true
             tid:
               bef_format: bef
               more_options:
@@ -81,6 +77,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
       row:
         type: fields
         options:
@@ -130,9 +130,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: h5
+          element_wrapper_class: card-title
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -180,14 +180,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 300
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
-            trim: false
+            strip_tags: true
+            trim: true
             preserve_tags: ''
             html: false
           element_type: ''
@@ -195,16 +195,17 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: p
+          element_wrapper_class: card-text
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 300
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -279,47 +280,6 @@ display:
           expose:
             operator: ''
           group: 1
-        combine:
-          id: combine
-          table: views
-          field: combine
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: combine_op
-            label: Search
-            description: ''
-            use_operator: false
-            operator: combine_op
-            identifier: combine
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          fields:
-            title: title
-            body: body
-          plugin_id: combine
         tid:
           id: tid
           table: taxonomy_index
@@ -333,7 +293,7 @@ display:
           exposed: true
           expose:
             operator_id: tid_op
-            label: 'Har taksonomiterm'
+            label: ''
             description: ''
             use_operator: false
             operator: tid_op
@@ -364,6 +324,46 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            post: post
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       sorts:
         created:
           id: created
@@ -388,6 +388,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -400,6 +401,8 @@ display:
       tags:
         - 'config:core.entity_view_display.node.post.default'
         - 'config:core.entity_view_display.node.post.teaser'
+        - 'config:core.entity_view_display.node.static_page.default'
+        - 'config:core.entity_view_display.node.static_page.teaser'
         - 'config:field.storage.node.body'
   page_1:
     display_plugin: page
@@ -421,4 +424,6 @@ display:
       tags:
         - 'config:core.entity_view_display.node.post.default'
         - 'config:core.entity_view_display.node.post.teaser'
+        - 'config:core.entity_view_display.node.static_page.default'
+        - 'config:core.entity_view_display.node.static_page.teaser'
         - 'config:field.storage.node.body'
