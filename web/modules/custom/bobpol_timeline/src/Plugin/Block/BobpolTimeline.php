@@ -24,8 +24,8 @@ class BobpolTimeline extends BlockBase {
   public function build() {
     $config = \Drupal::getContainer()->get('bobpol_timeline.settings')->getAll();
     $nid = \Drupal::routeMatch()->getParameter('node')->id();
-    
-    if ($nid == $config['node_ref']) {
+
+    if (isset($config['node_ref']) && $nid == $config['node_ref']) {
       return array(
         '#type' => 'markup',
         '#theme' => 'bobpol_timeline_block',
