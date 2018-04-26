@@ -14,11 +14,6 @@
 # http://www.robotstxt.org/robotstxt.html
 
 User-agent: *
-
-# Remove after release
-Disallow: /
-# Remove after reloease END
-
 # CSS, JS, Images
 Allow: /core/*.css$
 Allow: /core/*.css?

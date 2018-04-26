@@ -9,12 +9,17 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "itk": {
+            "type": "composer",
+            "url": "https://packagist.etek.dk"
         }
-    ],
+    },
+
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
