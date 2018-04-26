@@ -41,7 +41,14 @@ third_party_settings:
         - field_teaser
         - body
         - node_changed_date
+      footer:
+        - 'dynamic_block_field:node-timeline'
     fields:
+      'dynamic_block_field:node-timeline':
+        plugin_id: 'dynamic_block_field:node-timeline'
+        weight: 5
+        label: hidden
+        formatter: default
       node_changed_date:
         plugin_id: node_changed_date
         weight: 4

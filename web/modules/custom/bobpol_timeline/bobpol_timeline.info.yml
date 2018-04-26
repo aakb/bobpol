@@ -1,0 +1,5 @@
+name: Bobpol timeline
+type: module
+description: 'Add timeline html to specific page'
+package: Bobpol
+core: '8.x'

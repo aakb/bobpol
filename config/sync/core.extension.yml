@@ -3,6 +3,7 @@ module:
   better_exposed_filters: 0
   block: 0
   bobpol_hotness: 0
+  bobpol_timeline: 0
   bobpol_user: 0
   bobpol_user_validate: 0
   breakpoint: 0

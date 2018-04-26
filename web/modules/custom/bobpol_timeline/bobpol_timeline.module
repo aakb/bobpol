@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Contains module hooks.
+ */
+
+/**
+ * Implements hook_theme().
+ *
+ * Add template for timeline block.
+ */
+function bobpol_timeline_theme($existing, $type, $theme, $path) {
+  return [
+    'bobpol_timeline_block' => [
+      'template' => 'bobpol-timeline-block',
+      'variables' => ['config' => NULL],
+    ],
+  ];
+}

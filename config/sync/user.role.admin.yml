@@ -9,6 +9,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access bobpol hotness settings'
+  - 'access bobpol timeline settings'
   - 'access content overview'
   - 'access hero configuration'
   - 'access site in maintenance mode'
@@ -33,5 +34,6 @@ permissions:
   - 'edit own post content'
   - 'edit own static_page content'
   - 'edit terms in subjects'
+  - 'translate interface'
   - 'use text format filtered_html'
   - 'view own unpublished content'

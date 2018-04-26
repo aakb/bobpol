@@ -1,0 +1,4 @@
+services:
+  bobpol_timeline.settings:
+    class: Drupal\bobpol_timeline\State\BobpolTimelineSettings
+    arguments: ['@serialization.json', '@database']
