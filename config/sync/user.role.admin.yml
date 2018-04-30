@@ -25,6 +25,7 @@ permissions:
   - 'create post content'
   - 'create static_page content'
   - 'create terms in subjects'
+  - 'create url aliases'
   - 'delete any news content'
   - 'delete any post content'
   - 'delete any static_page content'
