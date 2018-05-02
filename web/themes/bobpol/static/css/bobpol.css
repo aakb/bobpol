@@ -6577,7 +6577,7 @@ nav.navbar {
   z-index: 10000;
   width: 100%;
   margin: 0;
-  top: 96px;
+  top: 95px;
   left: 0;
   -webkit-transition: top .4s ease-out;
   transition: top .4s ease-out; }
