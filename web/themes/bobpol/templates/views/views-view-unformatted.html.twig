@@ -15,12 +15,12 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-<div class="row equal">
+<div class="row">
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
 {% for row in rows %}
-  <div class="col-md-6 col-lg-4 d-flex">
+  <div class="col-md-6 col-lg-4 mb-4">
     {{ row.content }}
   </div>
 {% endfor %}
