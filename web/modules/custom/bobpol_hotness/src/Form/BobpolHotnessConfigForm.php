@@ -8,6 +8,7 @@ namespace Drupal\bobpol_hotness\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
 
 /**
  * Configuration form for the bobpol hotness module.
@@ -102,6 +103,29 @@ class BobpolHotnessConfigForm extends ConfigFormBase {
       '4' => $form_state->getValue('hotness4'),
       '5' => $form_state->getValue('hotness5'),
     ));
+
+    $indicators = \Drupal::getContainer()->get('bobpol_hotness.settings')->getAll();
+    $db = \Drupal::database();
+
+    $result = $db->select('flag_counts', 'f')
+      ->fields('f')
+      ->condition('flag_id', 'promote', '=')
+      ->execute()
+      ->fetchAllAssoc('entity_id');
+
+    foreach ($result as $value) {
+      if (isset($indicators)) {
+        $modified_value = 1;
+        foreach ($indicators as $key => $indicator) {
+          if ($value->count >= $indicator) {
+            $modified_value = $key;
+          }
+        }
+        $node = Node::load($value->entity_id);
+        $node->field_hotness->value = $modified_value;
+        $node->save();
+      }
+    }
 
     drupal_flush_all_caches();
   }
