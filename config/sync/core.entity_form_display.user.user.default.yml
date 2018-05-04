@@ -40,4 +40,5 @@ hidden:
   field_validation_date: true
   langcode: true
   language: true
+  path: true
   timezone: true

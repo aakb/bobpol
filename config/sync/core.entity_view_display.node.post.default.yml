@@ -48,11 +48,17 @@ third_party_settings:
         - node_changed_date
       right:
         - field_category
+        - 'dynamic_block_field:node-bobpol_hotness_levels'
         - flag_promote
         - field_sidebar
       footer:
         - field_comments
     fields:
+      'dynamic_block_field:node-bobpol_hotness_levels':
+        plugin_id: 'dynamic_block_field:node-bobpol_hotness_levels'
+        weight: 6
+        label: hidden
+        formatter: default
       node_changed_date:
         plugin_id: node_changed_date
         weight: 4
@@ -88,7 +94,7 @@ content:
       link: false
     third_party_settings: {  }
   field_comments:
-    weight: 8
+    weight: 9
     label: above
     settings:
       view_mode: default
@@ -106,7 +112,7 @@ content:
     type: image
     region: header
   field_sidebar:
-    weight: 7
+    weight: 8
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -120,7 +126,7 @@ content:
     type: basic_string
     region: left
   flag_promote:
-    weight: 6
+    weight: 7
     region: right
     settings: {  }
     third_party_settings: {  }

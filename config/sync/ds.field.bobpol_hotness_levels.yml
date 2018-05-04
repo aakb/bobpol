@@ -1,0 +1,10 @@
+id: bobpol_hotness_levels
+label: 'Bobpol hotness levels'
+ui_limit: ''
+properties:
+  block: bobpol_hotness_levels
+  use_block_title: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

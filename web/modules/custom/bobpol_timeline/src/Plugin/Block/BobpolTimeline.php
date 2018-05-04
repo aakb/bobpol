@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Implements hero block
+ * Implements timeline block
  */
 
 namespace Drupal\bobpol_timeline\Plugin\Block;
