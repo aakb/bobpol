@@ -85,7 +85,9 @@
         <div class="card-comment-count">{{ 'Contributions'|t }}: {{ comment_count }}</div>
       </div>
       <div class="col">
-        {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness', 'field_teaser') }}
+        <div class="float-right">
+          {{ content|without('body', 'links', 'field_image', 'field_category', 'field_hotness', 'field_teaser') }}
+        </div>
       </div>
     </small>
   </div>

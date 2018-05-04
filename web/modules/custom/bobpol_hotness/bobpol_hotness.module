@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Contains module hooks.
+ */
+
+/**
+ * Implements hook_theme().
+ *
+ * Add template for hotness block.
+ */
+function bobpol_hotness_theme($existing, $type, $theme, $path) {
+  return [
+    'bobpol_hotness_levels_block' => [
+      'template' => 'bobpol-hotness-levels-block',
+      'variables' => [],
+    ],
+  ];
+}

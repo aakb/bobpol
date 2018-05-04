@@ -9,5 +9,6 @@ bottom-scripts:
   js:
     static/js/popper.min.js: {scope: bottom}
     static/js/bootstrap.min.js: {scope: bottom}
+    static/js/hide_password_help.min.js: {scope: bottom}
   dependencies:
     - core/jquery

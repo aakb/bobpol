@@ -77,7 +77,7 @@
     <div class="card-body">
       {% if title %}
         {{ title_prefix }}
-        <h4 class="card-title"{{ title_attributes }}>{{ title }}</h4>
+        <h4 class="card-title"{{ title_attributes }}>{{ title|striptags }}</h4>
         {{ title_suffix }}
       {% endif %}
       <p class="card-text">

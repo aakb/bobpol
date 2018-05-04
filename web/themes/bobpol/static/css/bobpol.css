@@ -6080,15 +6080,20 @@ nav.navbar {
       opacity: 0;
       content: "";
       position: absolute;
-      height: 4px;
+      height: 0px;
       left: 8px;
       right: 8px;
       bottom: 0;
-      background: #3661d8; }
+      background: #3661d8;
+      -webkit-transition: height .2s ease-out, opacity .2s ease-out;
+      transition: height .2s ease-out, opacity .2s ease-out; }
     .navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item .nav-link.is-active {
       color: #333333; }
       .navbar-nav .nav-item .nav-link:hover:before, .navbar-nav .nav-item .nav-link.is-active:before {
-        opacity: 1; } }
+        opacity: 1;
+        -webkit-transition: height .2s ease-in, opacity .2s ease-in;
+        transition: height .2s ease-in, opacity .2s ease-in;
+        height: 4px; } }
 
 /* @mixin umbraco-grid-full-width() {
     > .container {
@@ -6292,7 +6297,8 @@ nav.navbar {
     background: #fab2c6; }
 
 .card {
-  border-bottom: 2px solid #d6d6d6; }
+  border-bottom: 2px solid #d6d6d6;
+  height: 100%; }
   .card-title .title {
     color: #333333; }
   .card .card-img-top {
@@ -6300,7 +6306,7 @@ nav.navbar {
     background-size: cover;
     background-position: center center; }
   .card .card-body {
-    min-height: 11rem; }
+    min-height: 5rem; }
   .card img {
     width: 100%; }
   .card.nemid-validation {
@@ -6571,7 +6577,7 @@ nav.navbar {
   z-index: 10000;
   width: 100%;
   margin: 0;
-  top: 96px;
+  top: 95px;
   left: 0;
   -webkit-transition: top .4s ease-out;
   transition: top .4s ease-out; }
