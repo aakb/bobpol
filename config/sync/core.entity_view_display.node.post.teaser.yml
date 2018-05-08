@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.post.field_comments
     - field.field.node.post.field_hotness
     - field.field.node.post.field_image
+    - field.field.node.post.field_sidebar
     - field.field.node.post.field_teaser
     - image.style.card
     - node.type.post
@@ -49,7 +50,7 @@ content:
     type: basic_string
     weight: 0
     region: content
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
   flag_promote:
@@ -65,4 +66,5 @@ content:
 hidden:
   body: true
   field_comments: true
+  field_sidebar: true
   langcode: true
