@@ -44,7 +44,7 @@
  * @see template_preprocess_form_element()
  */
 #}
-<label title="{{ attributes.title }}" class="btn btn-category {{ element['#attributes']['checked'] ? 'active' : '' }}">
+<label title="{{ element['#title']|striptags }}" class="btn btn-category {{ element['#attributes']['checked'] ? 'active' : '' }}">
   {{ children }} {{ label['#title'] }}
 </label>
 
