@@ -1,4 +1,6 @@
 # Changelog for bobpol
+## 1.0.1
+Modified frontpage news label
 
 ## 1.0.0
 Initial release
