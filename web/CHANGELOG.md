@@ -1,5 +1,8 @@
 # Changelog for bobpol
 
+## 1.0.5
+* Modified label for terms
+
 ## 1.0.4
 * Modified label for terms
 
