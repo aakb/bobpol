@@ -72,7 +72,7 @@ function bobpol_preprocess_form_element__radio(&$variables) {
   if (is_numeric($variables['element']['#return_value'])) {
     $tid = $variables['element']['#return_value'];
     $term_description = \Drupal\taxonomy\Entity\Term::load($tid)->get('description')->value;
-    $variables['attributes']['title'] = $term_description;
+    $variables['attributes']['title'] =	check_markup($term_description, 'filtered_html');
   }
 }
 
