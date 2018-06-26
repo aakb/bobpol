@@ -1,5 +1,9 @@
 # Changelog for bobpol
 
+## 1.0.6
+* SALG-418: Changed timeline
+* SALG-417: Changed billede
+
 ## 1.0.5
 * Modified label for terms
 
@@ -13,6 +17,7 @@ Modified frontpage news label
 * Changed timeline
 
 ## 1.0.1
+<<<<<<< HEAD
 * SALG-361: Added GDPR message to user validation
 
 ## 1.0.0
