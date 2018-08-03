@@ -1,5 +1,8 @@
 # Changelog for bobpol
 
+## 1.0.7
+* SERV-205: Updated drupal core 8.5.6
+
 ## 1.0.6
 * SALG-418: Changed timeline
 * SALG-417: Changed billede
