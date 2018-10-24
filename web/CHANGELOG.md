@@ -1,5 +1,8 @@
 # Changelog for bobpol
 
+## 1.0.8
+* SERV-215: Updated drupal core 8.6.2
+
 ## 1.0.7
 * SERV-205: Updated drupal core 8.5.6
 
@@ -20,7 +23,6 @@ Modified frontpage news label
 * Changed timeline
 
 ## 1.0.1
-<<<<<<< HEAD
 * SALG-361: Added GDPR message to user validation
 
 ## 1.0.0
