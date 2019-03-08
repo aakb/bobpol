@@ -29,5 +29,6 @@ content:
 hidden:
   field_comments: true
   field_image: true
+  field_sidebar: true
   field_teaser: true
   langcode: true

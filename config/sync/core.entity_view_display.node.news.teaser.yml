@@ -30,6 +30,7 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_comments: true
   field_image: true
   field_sidebar: true
   langcode: true
